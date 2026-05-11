@@ -19,7 +19,7 @@ Read:
 Extract the topic from the user's command.
 
 If the request is ambiguous, ask one question to clarify scope before drafting. Example:
-- `/plan email automation` → "Do you mean the email-triage skill, or a full scheduled pipeline?"
+- `/plan email automation` → "Do you mean automating email collection, or building a full email pipeline?"
 
 If clear enough, proceed without asking.
 

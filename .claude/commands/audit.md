@@ -40,9 +40,8 @@ Check every item below. For each check, assign the listed points if it passes, 0
 | A1 | `.claude/commands/analyze.md` exists | 3 | Check file |
 | A2 | `.claude/commands/plan.md` exists | 3 | Check file |
 | A3 | `.claude/commands/build.md` exists | 3 | Check file |
-| A4 | `.claude/commands/email-triage.md` exists | 5 | Check file |
-| A5 | `.claude/commands/pulse.md` exists | 3 | Check file |
-| A6 | Any additional skills beyond the 5 listed above | 3 | Count files in .claude/commands/ |
+| A4 | `.claude/commands/pulse.md` exists | 5 | Check file |
+| A5 | Any additional skills beyond the 4 listed above | 3 | Count files in .claude/commands/ |
 
 ### F — Flow (max 20 pts)
 
@@ -126,5 +125,5 @@ Print: "Audit saved to tuning/audits/[filename].md"
 ## Behavior Rules
 
 - Be honest. Zero points means zero — don't give partial credit for half-done items.
-- The gap list must be prioritized by impact, not just score. A missing email-triage skill (A) is higher impact than a missing Fireflies connection (R).
+- The gap list must be prioritized by impact, not just score. A missing pulse skill (A) is higher impact than a missing Fireflies connection (R).
 - Always end with exactly one recommended next action.

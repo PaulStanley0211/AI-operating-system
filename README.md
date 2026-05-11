@@ -68,7 +68,6 @@ Once your AIOS is set up, you have a set of commands available in Claude Code at
 | `/pulse` | Get a live snapshot of your business numbers |
 | `/process` | Clear your task inbox — Claude routes everything to the right place |
 | `/review` | Guided weekly review of everything on your plate |
-| `/email-triage` | Claude reads your inbox and drafts replies in your voice |
 | `/audit` | Score how complete and healthy your AIOS is |
 | `/tune` | Get recommendations for what to improve or automate next |
 | `/install` | Install a node |

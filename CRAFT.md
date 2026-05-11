@@ -93,7 +93,7 @@ The AI should write and speak in my voice. When drafting emails, posts, or any o
 
 ## Email Profile
 
-Use this when running `/email-triage`. Classify every email into one of three buckets.
+Use this to classify incoming email. Classify every email into one of three buckets.
 
 **Ignore — never read these:**
 - [FILL IN — e.g., "All newsletters and marketing digests"]
@@ -162,7 +162,6 @@ your-aios/
 | `/analyze` | Deep analysis of a task, system, or business problem |
 | `/plan` | Create a structured implementation plan |
 | `/build` | Execute a plan step by step |
-| `/email-triage` | Classify inbox into ignore / draft / auto-respond |
 | `/process` | Empty the GTD inbox to zero |
 | `/review` | Run the weekly GTD review |
 | `/audit` | Grade the CRAFT environment, produce a health score |

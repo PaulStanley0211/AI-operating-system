@@ -20,10 +20,10 @@ Ask these before doing anything. Use the answers to customize the context files 
    *(This becomes the core of context/business.md and CRAFT.md — get it right upfront)*
 
 2. **Who is your customer and what problem do you solve for them?**
-   *(Fills the customer persona and value prop sections — important for email-triage later)*
+   *(Fills the customer persona and value prop sections in context/business.md)*
 
 3. **Which email client do you use — Gmail, Outlook, or both?**
-   *(Configures the email profile in CRAFT.md for /email-triage)*
+   *(Configures the email profile in CRAFT.md)*
 
 4. **How would you describe your communication style? Pick the closest: Direct and brief / Warm and conversational / Detailed and thorough**
    *(Seeds the voice section — the AI will match this style when writing on your behalf)*
