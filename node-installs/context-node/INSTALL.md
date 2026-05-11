@@ -12,6 +12,32 @@ Completes the Context layer: fills in CRAFT.md, populates context/ files, import
 
 ---
 
+## Setup Questions
+
+Ask these before doing anything. Use the answers to customize the context files and CRAFT.md.
+
+1. **How would you describe your business to someone who's never heard of it? One or two sentences.**
+   *(This becomes the core of context/business.md and CRAFT.md — get it right upfront)*
+
+2. **Who is your customer and what problem do you solve for them?**
+   *(Fills the customer persona and value prop sections — important for email-triage later)*
+
+3. **Which email client do you use — Gmail, Outlook, or both?**
+   *(Configures the email profile in CRAFT.md for /email-triage)*
+
+4. **How would you describe your communication style? Pick the closest: Direct and brief / Warm and conversational / Detailed and thorough**
+   *(Seeds the voice section — the AI will match this style when writing on your behalf)*
+
+5. **Do you have existing AI conversation history to import — from Claude, ChatGPT, both, or neither?**
+   *(Yes = run the relevant import scripts. No = skip that step entirely)*
+
+6. **What are the 2–3 things you're most focused on right now in your business?**
+   *(Pre-fills context/strategy.md so /start surfaces your real priorities immediately)*
+
+Use these answers to fill in CRAFT.md and context/ files now — don't leave [FILL IN] markers for things the user just told you.
+
+---
+
 ## Prerequisites
 
 - [ ] Vault Node installed and CRAFT.md filled in

@@ -12,6 +12,30 @@ Installs data collectors that pull from your business APIs on a schedule, stores
 
 ---
 
+## Setup Questions
+
+Ask these before doing anything. Each answer determines which collectors get set up and which get skipped.
+
+1. **Do you have a YouTube channel you want to track?**
+   *(Yes = set up YouTube collector. No = skip entirely — don't ask for a YouTube API key)*
+
+2. **Do you use a payment processor for revenue? Which one — Stripe, something else, or none yet?**
+   *(Stripe = set up Stripe collector. Something else = note it, skip for now. None = skip)*
+
+3. **Which email do you use for business — Gmail, Outlook/Microsoft 365, both, or something else?**
+   *(Sets up the relevant email collector. Both = set up both. Something else = skip email collection for now)*
+
+4. **Do you use any meeting transcription tool — like Fireflies, Otter, or something similar?**
+   *(Fireflies = set up Fireflies collector. Other = mention it's not supported yet. None = skip)*
+
+5. **Are you on Windows, Mac, or Linux?**
+   *(Determines which scheduler setup to walk through — Task Scheduler XML vs cron)*
+
+Only install collectors for sources the user confirmed. Don't ask for API keys for services they don't use.
+After collecting answers, show a summary: "We'll connect: [list]. Skipping: [list]."
+
+---
+
 ## Prerequisites
 
 - [ ] Vault Node and Context Node installed

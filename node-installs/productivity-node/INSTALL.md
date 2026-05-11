@@ -12,6 +12,33 @@ Creates a file-based GTD system in `flow/gtd/`. The AI can capture tasks, proces
 
 ---
 
+## Setup Questions
+
+Ask these before doing anything. Use the answers to pre-build the GTD files for their actual life — not a generic template.
+
+1. **What are the main areas of your life and work that you're responsible for?**
+   *(Examples: Business, Clients, Content, Finance, Personal, Health, Team. List them out — these become the sections in areas.md and projects.md. Don't use generic defaults.)*
+
+2. **What are 3–5 real projects you're actively working on right now?**
+   *(Add these directly to projects.md during install — so the system has real data from minute one, not placeholder text)*
+
+3. **Is there anything sitting in your head right now that you've been meaning to do but haven't captured anywhere?**
+   *(Add these directly to inbox.md during install — then run /process immediately after. Starting with a live inbox makes the first session immediately valuable.)*
+
+4. **What day and time works best for your weekly review?**
+   *(Default: Friday afternoon. Used to customize the reminder note in review-checklist.md and dashboard.md)*
+
+5. **Beyond the defaults, are there any context tags you want for your next-actions list?**
+   *Default tags: @me, @claude, @calls, @errands.*
+   *(Examples: @home, @partner, @vendor, @admin. Add them now so the list is right from day one.)*
+
+6. **Do you use a physical notebook, sticky notes, or anything offline to capture ideas?**
+   *(Yes = add a "check physical capture" step to the weekly review checklist. No = skip it.)*
+
+Use these answers to build out areas.md, projects.md, and next-actions.md with real content during install. The system should feel lived-in from the first session, not empty.
+
+---
+
 ## Prerequisites
 
 - [ ] Vault Node installed

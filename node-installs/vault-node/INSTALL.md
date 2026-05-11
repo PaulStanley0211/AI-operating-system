@@ -14,6 +14,29 @@ This node ships with the base repo — if you cloned this repo, the Vault Node i
 
 ---
 
+## Setup Questions
+
+Ask these before doing anything. Use the answers to configure the install.
+
+1. **What's your name, and what do you call your business or project?**
+   *(Used to personalize CRAFT.md and name the workspace)*
+
+2. **What do you do in one sentence — what you sell or create, and who it's for?**
+   *(Seeds the business section of CRAFT.md so /start works immediately)*
+
+3. **Are you working solo, or do you have a team?**
+   *(Solo = simplify team.md. Team = set up proper roles section)*
+
+4. **What operating system are you on — Windows, Mac, or Linux?**
+   *(Determines scheduler instructions shown in later nodes — Task Scheduler vs cron)*
+
+5. **Do you already have a GitHub account and a personal access token?**
+   *(Yes = skip account setup. No = walk through creating both before proceeding)*
+
+Use answers to pre-fill CRAFT.md identity and business sections. Don't leave them blank.
+
+---
+
 ## Prerequisites
 
 - [ ] Git installed (`git --version` to verify)

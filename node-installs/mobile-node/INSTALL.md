@@ -12,6 +12,32 @@ Creates a Telegram bot connected to your workspace. You can ask questions, query
 
 ---
 
+## Setup Questions
+
+Ask these before doing anything. Each answer configures how the bot behaves.
+
+1. **Have you used Telegram before, and do you already have a bot set up?**
+   *(Yes to both = just need the token. No = walk through downloading Telegram and BotFather step by step.)*
+
+2. **What would you primarily use the bot for — quick data queries, asking business questions, capturing ideas, or all of the above?**
+   *(Helps set the right persona and frame the bot correctly for how they'll actually use it)*
+
+3. **What communication style do you want from your AI assistant on your phone?**
+   *Executive: short, direct, no filler — built for when you're between meetings.*
+   *Analyst: more detail, includes numbers and reasoning — built for when you have a few minutes.*
+   *Assistant: balanced, clear, conversational — good general default.*
+   *(Sets BOT_PERSONA in .env)*
+
+4. **Do you want to be able to send voice notes to the bot and have it respond?**
+   *(Yes = set up Whisper transcription, needs OpenAI API key. No = skip voice entirely — text only.)*
+
+5. **Who else, if anyone, should have access to the bot? Or just you?**
+   *(Just me = single chat ID in allowlist. Team = collect multiple IDs. Sets TELEGRAM_CHAT_ID_ALLOWLIST.)*
+
+Use these answers to configure BOT_PERSONA, the allowlist, and whether to include voice setup. Skip the Whisper steps entirely if they said no to voice.
+
+---
+
 ## Prerequisites
 
 - [ ] Vault Node and Context Node installed

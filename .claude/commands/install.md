@@ -1,9 +1,9 @@
 ---
 name: install
-description: Install a CRAFT node into this workspace. Reads the node's INSTALL.md and walks through guided setup step by step. Usage: /install [path-to-node-folder]
+description: Install a CRAFT node into this workspace. Reads the node's INSTALL.md, asks setup questions upfront, then walks through guided setup step by step. Usage: /install [path-to-node-folder]
 user_invocable: true
 trigger: /install
-version: 1.0.0
+version: 1.1.0
 ---
 
 # /install — Node Installation
@@ -29,60 +29,88 @@ This will install:
 - [list CRAFT.md sections to be updated]
 ```
 
-Ask: "Ready to install? (yes/no)"
+Ask: "Ready to begin setup? I'll ask a few quick questions first."
 
-## Step 3: Walk Through Prerequisites
+## Step 3: Run Setup Questions (BEFORE doing anything)
 
-Read the Prerequisites section of INSTALL.md. For each item:
-- Check if it's likely satisfied (e.g., if it requires Python, it's probably already installed)
-- For API keys or accounts: tell the user where to get them before proceeding
+This is the most important step. Read the `## Setup Questions` section of INSTALL.md.
+
+Ask every question in that section **before touching any files or collecting any API keys**. Ask them one at a time, conversationally. Wait for each answer before asking the next.
+
+After collecting all answers:
+- Print a short summary: "Based on your answers, here's what we'll set up: [list]"
+- List anything being skipped and why: "Skipping: [X] — you said [reason]"
+- Ask: "Does that look right? Ready to proceed?"
+
+**Use the answers throughout the rest of the install to:**
+- Skip steps that don't apply to this person's setup
+- Pre-fill configuration values where possible
+- Adjust which .env variables to collect
+- Customize any template files with their specific answers (business name, areas, etc.)
+
+The goal is that by the end of setup, the installed node feels configured for *this* person — not like a generic template they'll have to fill in later.
+
+## Step 4: Walk Through Prerequisites
+
+Read the Prerequisites section. For each item:
+- Check if it's likely already satisfied based on context and prior answers
+- Skip prerequisites that don't apply based on Setup Questions answers
+- For accounts or API keys: tell the user exactly where to get them
 - Pause if any prerequisite is clearly not met. Don't continue until it's resolved.
 
-## Step 4: Collect .env Variables
+## Step 5: Collect .env Variables
 
-For each variable listed in the INSTALL.md `.env Variables Required` section:
+Only collect variables that are relevant based on the Setup Questions answers. Skip variables for services the user said they don't use.
+
+For each relevant variable:
 - Ask the user to provide the value (or confirm they've already added it)
-- Once confirmed, add the variable to `.env` using the Edit tool
+- Once confirmed, add it to `.env` using the Edit tool
 - Never print the value back — just confirm it was added
 
-## Step 5: Create Files
+## Step 6: Create and Customize Files
 
-For each file listed in the INSTALL.md `Files Installed` section:
-- Create the file at the specified path using the Write tool
-- Use the node's template content if provided in INSTALL.md
+For each file in the `Files Installed` section:
+- Create it using the Write tool
+- Where possible, pre-fill it with answers from the Setup Questions (business name, areas of responsibility, preferred tools, etc.)
+- Don't leave `[FILL IN]` markers for things the user already told you — fill them in now
 - Confirm each file after creation
 
-## Step 6: Update CRAFT.md
+## Step 7: Update CRAFT.md
 
-If INSTALL.md specifies CRAFT.md additions, make those edits now using the Edit tool. Show the user what was added.
+If INSTALL.md specifies CRAFT.md additions, make those edits now. Show the user what was added.
 
-## Step 7: Run Setup Steps
+## Step 8: Run Setup Steps
 
-For each step in the INSTALL.md `Setup Steps` section:
+For each step in `Setup Steps`:
+- Skip steps that don't apply based on Setup Questions answers
 - If it's a shell command: print it in a code block, ask the user to run it, wait for confirmation
 - If it's a file edit: do it directly
-- If it requires user input (API key, config value): ask for it
+- If it requires user input: ask for it
 
-## Step 8: Validation
+## Step 9: Validation
 
-Run the validation check from the INSTALL.md `Validation` section.
-- If it's a command: print it and ask the user to run it, then confirm the expected output
+Run the validation check from the `Validation` section.
+- Print the command and ask the user to run it
+- Confirm expected output
 - Report pass/fail clearly
 
-## Step 9: Log and Finish
+## Step 10: Log and Finish
 
 1. Add an entry to `tuning/changelog.md`:
    ```
    ## [today's date]
    - Installed: [Node Name] v[version]
+   - Configuration: [brief note on what was enabled/skipped based on their answers]
    ```
 2. Print completion summary:
    ```
    ✅ [Node Name] installed successfully.
-   
+
    What was installed: [brief list]
+   Configured for: [their specific setup based on answers]
    .env variables added: [key names only, not values]
-   
+   Skipped: [anything not installed and why]
+
    Next: [what to do now, from INSTALL.md]
    ```
 
@@ -91,3 +119,4 @@ Run the validation check from the INSTALL.md `Validation` section.
 - If a step fails, stop and explain the error clearly. Do not skip ahead.
 - If the user says "skip" on a non-critical step, note it and continue.
 - If a file already exists at a target path, warn before overwriting.
+- If a Setup Question answer conflicts with a prerequisite, flag it before proceeding.

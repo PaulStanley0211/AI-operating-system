@@ -12,6 +12,32 @@ Assembles your metrics, emails, and meeting transcripts into a structured daily 
 
 ---
 
+## Setup Questions
+
+Ask these before doing anything. Each answer configures how the brief is generated and delivered.
+
+1. **Which AI model do you want generating your daily brief?**
+   *Gemini (recommended — ~$0.005/brief, fast, great quality) or Claude (~$0.03/brief, slightly higher quality)*
+   *(Sets BRIEF_LLM in .env)*
+
+2. **How much detail do you want in your morning brief?**
+   *Founder preset: executive summary, key signals, metrics, email digest — 3–5 min read.*
+   *Operator preset: same plus full meeting summaries, pipeline, detailed action items — 8–10 min read.*
+   *(Sets BRIEF_PRESET in .env)*
+
+3. **What's the single most important metric in your business right now — the one number that tells you if things are going well?**
+   *(Examples: revenue, subscribers, active clients, calls handled. Sets DASHBOARD_METRIC — this is what gets charted.)*
+
+4. **What time do you want the brief delivered each morning?**
+   *(Default: 7:00 AM. Sets the scheduler time. Pick something before you usually start work.)*
+
+5. **Is there anything specific you always want the brief to cover — a recurring signal, a person to watch, a project that needs daily visibility?**
+   *(Optional — used to customize the brief system prompt so it consistently surfaces what matters most to you)*
+
+Use these answers to set .env values and configure the scheduler before proceeding. Don't leave them as defaults without asking.
+
+---
+
 ## Prerequisites
 
 - [ ] Vault Node, Context Node, and Intelligence Node installed
