@@ -1,86 +1,61 @@
-# Vault Node
+# 01 — Vault Node
 
-> Layer: Infrastructure
-> The foundation everything else is built on.
+> Install this first. Everything else builds on top of it.
 
 ---
 
 ## What It Is
 
-The Vault Node sets up your AIOS workspace — the folder structure, the master context file (CRAFT.md), your Python environment, and your git repository. Every other node installs into a workspace that Vault creates.
+The Vault Node creates your AIOS workspace — the folder structure, the master context file, and all the foundational pieces that every other node attaches to. Think of it as setting up the skeleton before any muscle gets added.
 
-You install this first. It takes about 10 minutes.
+Without this, the other nodes have nowhere to live.
 
 ---
 
 ## What It Does
 
-- Creates the full folder structure for your AIOS (`context/`, `reach/`, `flow/`, `tuning/`, `outputs/`, etc.)
-- Installs `CRAFT.md` — the single file that tells Claude who you are, what your business does, and how you like to work
-- Installs `requirements.txt` and confirms your Python environment is ready
-- Initializes a git repository so your workspace is version-controlled from day one
-- Optionally pushes to a private GitHub repo so your work is backed up and accessible
+When you install the Vault Node, Claude builds out your workspace structure, creates a file called CRAFT.md (more on that below), and makes sure everything is in place for the nodes that come after it.
+
+**CRAFT.md is the most important file in your entire AIOS.** It's automatically loaded at the start of every Claude session. It tells Claude who you are, what your business does, what your priorities are, and how you like to work. The more accurate and honest it is, the smarter Claude will be from the very first message of every session.
+
+The Vault Node installs CRAFT.md with a template. Your job after install is to fill it in.
 
 ---
 
-## How to Install
+## What Happens During Install
 
-Open Claude Code in the AIOS folder and run:
+Open Claude Code and run:
 ```
-/install node-installs/vault-node
+/install core-node-installs/01-vault-node
 ```
 
-Claude will ask you 5 setup questions before touching anything:
-1. Your name and business name
-2. A one-sentence description of what your business does
-3. Whether you're solo or have a team
-4. Your operating system (Windows, Mac, or Linux)
-5. Whether you have a GitHub account to push to
+Claude will ask you a few questions before building anything:
 
-Your answers are used to pre-fill CRAFT.md and skip irrelevant steps.
+- Your name and your business name
+- A one-sentence description of what your business does
+- Whether you're working solo or have a team
+- What operating system you're on
+
+Your answers go directly into CRAFT.md so you're not starting from a blank page.
+
+---
+
+## What You'll Need to Do Yourself
+
+After install, open CRAFT.md and fill in the rest of it. There are sections for your business description, your team, your current strategy, how you communicate, and how you like to work with AI. None of it needs to be perfect on day one — but the more you put in, the more useful every Claude session becomes.
+
+Come back and update it whenever your strategy shifts or something significant changes in the business.
 
 ---
 
 ## How to Know It's Working
 
-After install, check these:
-
-- [ ] `CRAFT.md` exists in the root folder and has your name/business filled in
-- [ ] All expected directories exist: `context/`, `reach/`, `flow/`, `tuning/`, `outputs/`
-- [ ] `.env.example` exists (copy to `.env` and start filling in keys as you go)
-- [ ] `requirements.txt` is installed in your virtual environment
-- [ ] `git status` shows a clean repo with an initial commit
-- [ ] (Optional) `git remote -v` shows your GitHub repo
-
-Run `/start` in Claude Code — it should greet you by name and describe your business correctly.
-
----
-
-## What to Expect
-
-The Vault Node installs quickly. Most of the work is filling in CRAFT.md after install.
-
-CRAFT.md has sections for: About Me, The Business, Team, Strategy This Quarter, Voice, Email Profile, and Working Preferences. You don't need to fill it all in on day one — but the more complete it is, the more useful every Claude session becomes.
-
-Leave `[FILL IN]` in any section you're not ready for. Come back to it.
-
----
-
-## What You Have to Do Yourself
-
-| Task | Notes |
-|------|-------|
-| Fill in `CRAFT.md` | Most important thing you'll do in this node — take your time |
-| Create a GitHub repo | If you want version control + backup (recommended) |
-| Copy `.env.example` to `.env` | Needed before any data sources are connected |
-
-That's it. Vault is pure structure — no external APIs, no credentials required.
+Run `/start` in Claude Code. If Claude greets you by name, describes your business accurately, and mentions your current focus, the Vault Node is doing its job.
 
 ---
 
 ## Next Step
 
-Once Vault is done:
 ```
 /install core-node-installs/02-context-node
 ```

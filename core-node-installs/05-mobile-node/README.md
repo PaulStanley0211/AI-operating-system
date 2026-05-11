@@ -1,103 +1,72 @@
-# Mobile Node
+# 05 — Mobile Node
 
-> Layer: F (Flow)
-> Full AIOS access from your phone via Telegram.
+> Your AIOS in your pocket.
 
 ---
 
 ## What It Is
 
-The Mobile Node creates a Telegram bot connected to your AIOS workspace. You can ask it questions, query your business metrics, get answers from your AI, and capture tasks — all from your phone. The bot is secured so only you (and whoever you authorize) can interact with it.
+The Mobile Node creates a Telegram bot connected to your workspace. You can message it like you'd message a person — ask a business question, query your numbers, capture a task — and it responds based on your actual context and data.
 
-If you're getting the Coffee Debrief Node, this must be installed first — it provides the Telegram bot that delivers your morning brief.
+It's how you access your AI when you're away from your desk.
 
 ---
 
 ## What It Does
 
-- Creates a Telegram bot that responds to messages in natural language
-- Loads your business context (CRAFT.md + metrics.md) on every request so answers are grounded in your actual data
-- Supports three response styles: Executive (short and direct), Analyst (detailed with reasoning), or Assistant (balanced)
-- Handles text messages and voice notes (with Whisper transcription if enabled)
-- Locks the bot to an allowlist of chat IDs — anyone else gets "Access denied"
-- Integrates with GTD: send `/capture [task]` to add items to your inbox from anywhere
+Once this is set up, you have a private Telegram bot that:
+
+- Answers business questions using your context and live data
+- Responds in whatever style you set — short and direct, detailed, or conversational
+- Lets you send voice notes that it transcribes and answers
+- Accepts `/capture [task]` messages that go straight into your task inbox
+- Only responds to you (or whoever you authorize) — everyone else gets locked out
+
+The bot is stateless, meaning it doesn't carry memory between messages. It's best for single questions and quick lookups, not long back-and-forth sessions. For deeper work, use Claude Code on your computer.
 
 ---
 
-## How to Install
+## What Happens During Install
 
-With Vault and Context nodes already installed, run:
+Open Claude Code and run:
 ```
-/install node-installs/mobile-node
+/install core-node-installs/05-mobile-node
 ```
 
-Claude will ask you 5 setup questions:
-1. Whether you've used Telegram before and if you already have a bot set up
-2. What you'll primarily use the bot for (quick queries, business questions, capturing ideas, all of the above)
-3. What response style you want (Executive / Analyst / Assistant)
-4. Whether you want voice note support (requires OpenAI API key for Whisper)
-5. Who else, if anyone, should have access to the bot
+Claude will ask you a few things:
 
-Your answers configure the bot persona and the allowlist before any code runs.
+- Whether you've used Telegram before (and if you already have a bot)
+- What you'll mainly use the bot for
+- What response style you want
+- Whether you want to be able to send voice notes
+- Whether anyone else should have access
+
+Based on your answers, Claude sets up the bot configuration and walks you through getting it connected.
+
+---
+
+## What You'll Need to Do Yourself
+
+You'll need a Telegram account. If you don't have one, Claude will walk you through setting it up — it's free and takes a few minutes.
+
+Then you'll create a bot through a Telegram service called BotFather. It sounds technical but it's just a conversation in Telegram — you follow the prompts and it gives you a code. Claude tells you exactly what to do.
+
+You'll also need to find your Telegram chat ID (another quick lookup Claude guides you through), and if you want voice notes, you'll need one more API key from OpenAI. That part is optional.
 
 ---
 
 ## How to Know It's Working
 
-After install, start the bot:
-```bash
-python flow/bot/main.py
-```
+Send a message to your bot in Telegram. It should respond within a few seconds.
 
-Then open Telegram and send a message to your bot. It should respond within 10 seconds.
+Then try asking it something about your business — "What's my YouTube subscriber count?" or "What's my current strategy?" If it answers using your actual data and context, it's working.
 
-Run these three tests:
-1. Send: "Hello" → should get a response (confirms bot is running and auth works)
-2. Send: "What's my current business strategy?" → should summarize from your context files
-3. Have someone else (or a second account) message the bot → should receive "Access denied"
-
-If all three pass, Mobile Node is working.
-
-To run the bot in the background without a terminal window:
-```
-flow/bot/start_bot.bat   (Windows)
-nohup python flow/bot/main.py &   (Mac/Linux)
-```
-
----
-
-## What to Expect
-
-The bot is stateless — it doesn't remember the previous message in a conversation. Each message is answered independently using your context files and metrics. This keeps it fast and simple, but means it's better suited for single-question queries than multi-turn conversations.
-
-For anything requiring deeper work (writing, planning, analysis), use Claude Code on your desktop. The bot is for quick access when you're away from your desk.
-
-Voice note support adds a meaningful level of convenience — hold record, speak your question, get an answer — but requires an OpenAI API key. If you don't have one, skip it for now and add it later by editing `.env` and setting `OPENAI_API_KEY`.
-
----
-
-## What You Have to Do Yourself
-
-| Task | Notes |
-|------|-------|
-| Create a Telegram bot via @BotFather | Free — takes 2 minutes in Telegram |
-| Get your chat ID from @userinfobot | Free — takes 30 seconds |
-| Add bot token and chat ID to `.env` | Copy-paste into the env file |
-| Get an OpenAI API key (optional) | platform.openai.com — only needed for voice notes |
-| Decide how to run the bot long-term | Task Scheduler (Windows) or systemd/nohup (Mac/Linux) |
-
-**Security reminder:** Never share your bot token. If it's ever compromised, revoke it immediately via @BotFather using `/revoke`.
+Finally, try sending a message from a different account or having a friend message it. They should get "Access denied." If that works too, the security is set up correctly.
 
 ---
 
 ## Next Step
 
-Once Mobile is running, install the Coffee Debrief to get your morning brief delivered:
-```
-/install core-node-installs/04-coffee-debrief-node
-```
-
-Or move to task management:
 ```
 /install core-node-installs/06-productivity-node
 ```

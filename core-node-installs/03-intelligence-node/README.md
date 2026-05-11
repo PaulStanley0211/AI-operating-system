@@ -1,112 +1,67 @@
-# Intelligence Node
+# 03 — Intelligence Node
 
-> Layer: R (Reach)
-> Connects your data sources. Collects metrics daily. Gives the AI eyes on your business.
+> This is where Claude gets eyes on your business.
 
 ---
 
 ## What It Is
 
-The Intelligence Node is your data layer. It installs collectors that pull numbers from your actual business tools — YouTube, Stripe, Gmail, Outlook, Fireflies — and store everything in a local SQLite database. Once it's running, your AI can see what's actually happening in your business, not just what you tell it.
+The Intelligence Node connects Claude to your actual business data. It pulls numbers from the tools you're already using — YouTube, Stripe, Gmail, Outlook, Fireflies — stores them locally, and gives Claude a live view of what's happening in your business every day.
 
-A scheduled job runs the collectors automatically every morning so your data is always fresh before you start work.
+Before this node, Claude knows about your business from what you've told it. After this node, it can see it.
 
 ---
 
 ## What It Does
 
-- Installs data collectors for each of your connected sources
-- Creates a local SQLite database (`reach/data/data.db`) for business metrics
-- Creates a second database (`reach/data/intel.db`) for emails and meeting transcripts
-- Generates `reach/metrics.md` — a formatted snapshot of all your current numbers
-- Schedules a daily run (6 AM by default) so collection happens automatically
+This node installs collectors — small programs that run in the background and pull data from your connected tools on a schedule. Every morning, they update a snapshot of your business numbers. Claude reads that snapshot at the start of every session so it always has current information.
 
-**Supported data sources:**
+**What gets collected depends on what you connect:**
 
-| Source | What gets collected |
-|--------|-------------------|
-| YouTube | Subscribers, total views, video count, 30-day performance |
-| Stripe | MRR, ARR, active subscribers |
-| Gmail | Inbox emails (noise-filtered, last 24 hours) |
-| Outlook / Microsoft 365 | Same as Gmail, via Microsoft Graph API |
-| Fireflies | Full meeting transcripts, summaries, action items |
-| FX Rates | Currency exchange rates |
+- **YouTube** — subscriber count, views, video performance
+- **Stripe** — revenue, active customers
+- **Gmail or Outlook** — your inbox, filtered down to the emails that actually matter
+- **Fireflies** — your meeting transcripts and summaries
 
-You only set up the sources you actually use. Claude skips the rest.
+You only connect the tools you actually use. Claude skips everything else.
+
+Once it's running, you also get a file called `reach/metrics.md` that Claude reads every session — a formatted snapshot of all your current numbers. When you run `/pulse`, that's where Claude pulls from.
 
 ---
 
-## How to Install
+## What Happens During Install
 
-With Vault and Context nodes already installed, run:
+Open Claude Code and run:
 ```
-/install node-installs/intelligence-node
+/install core-node-installs/03-intelligence-node
 ```
 
-Claude will ask you 5 setup questions before touching anything:
-1. Do you have a YouTube channel to track?
-2. Do you use a payment processor for revenue — Stripe, something else, or none yet?
-3. Which email do you use — Gmail, Outlook, both, or something else?
-4. Do you use a meeting transcription tool like Fireflies or Otter?
-5. Are you on Windows, Mac, or Linux? (for scheduler setup)
+Claude will ask what tools you use before doing anything. You'll confirm which sources to connect, and Claude will tell you exactly what it's going to set up — and what it's skipping. Then it walks you through each connection one at a time.
 
-After your answers, Claude will tell you exactly what it will connect and what it will skip. Then it sets up only what you confirmed.
+Some connections just need a key you copy and paste. Others (like Gmail or Outlook) need you to sign in through a browser once so Claude has permission to read your inbox. You only do this once — after that it's automatic.
+
+Claude will also set up a daily schedule so everything runs automatically in the background without you having to think about it.
+
+---
+
+## What You'll Need to Do Yourself
+
+For each tool you connect, you'll need to get an access key from that tool's settings or developer dashboard. Claude tells you exactly where to find it and what to look for — you don't need to know anything about APIs in advance.
+
+For Gmail and Outlook, you'll need to authorize access through a browser sign-in. It takes about two minutes and only happens once.
 
 ---
 
 ## How to Know It's Working
 
-After install, run:
-```bash
-python reach/collectors/collect.py
-```
+After install, run `/pulse` in Claude Code. If it returns real numbers from your business — actual subscriber counts, actual revenue, actual email counts — the Intelligence Node is running.
 
-You should see each configured collector complete with a count of rows collected. Then run:
-```bash
-python reach/generate_metrics.py
-```
-
-Open `reach/metrics.md` — it should show real numbers from your connected sources with today's date.
-
-In Claude Code, run:
-```
-/pulse
-```
-
-If `/pulse` returns actual numbers (not placeholder text), the Intelligence Node is working.
-
----
-
-## What to Expect
-
-The initial setup requires navigating 1–3 external developer consoles to get API keys. This is the most technically involved part of the entire AIOS install. Expect 30–60 minutes if it's your first time doing OAuth setup for Gmail or creating a YouTube API key.
-
-Once it's configured, you won't need to touch it again. The daily collection job runs silently in the background. Your metrics stay current automatically.
-
-**Gmail/Outlook auth requires a one-time browser sign-in.** You'll run a script, a browser window opens, you authorize, and it saves a token. After that, collection is fully automatic.
-
----
-
-## What You Have to Do Yourself
-
-| Task | Notes |
-|------|-------|
-| Get a YouTube API key | Google Cloud Console → Enable YouTube Data API v3 → Credentials |
-| Get a Stripe restricted key | Stripe Dashboard → Developers → API Keys (read-only is fine) |
-| Create Gmail OAuth credentials | Google Cloud Console → OAuth 2.0 client ID |
-| Run Gmail auth script once | Browser sign-in, saves token — then automatic forever |
-| Set up Azure app for Outlook | Azure Portal → App registrations → Mail.Read permission |
-| Run Outlook device code auth once | Follow prompt, sign in — then automatic forever |
-| Get Fireflies API key | app.fireflies.ai → Settings → API |
-| Set up Task Scheduler / cron | Claude provides the exact command and timing |
-
-You only do the tasks for sources you confirmed in setup. If you said no to Stripe, you do nothing for Stripe.
+If you see your data, you're good.
 
 ---
 
 ## Next Step
 
-Once Intelligence is running:
 ```
 /install core-node-installs/04-coffee-debrief-node
 ```

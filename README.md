@@ -1,173 +1,89 @@
 # AIOS — AI Operating System
 
-> Built on the CRAFT Framework. Give your AI a brain, eyes, a voice, and a task list.
-> Created by [Tommy Chryst](https://youtube.com/@tommychryst) | Part of the [AAA Accelerator](https://aaaaccelerator.com)
+> Built on the CRAFT Framework. Free to use, free to build on.
+> Created by [Tommy Chryst](https://youtube.com/@tommychryst)
 
 ---
 
 ## What This Is
 
-AIOS is a free, open-source operating layer that turns Claude Code into a full business intelligence system. It gives your AI:
+AIOS is a free, open-source starter kit for building your own AI Operating System using Claude Code.
 
-- **Context** — it knows your business, your voice, your priorities
-- **Data** — it watches your metrics every day, automatically
-- **Intelligence** — it reads your emails and meetings, synthesizes them into a morning brief
-- **Automation** — it captures tasks, manages your to-do list, and helps you run weekly reviews
-- **A phone interface** — full access to your AI from Telegram
+The idea is simple: instead of starting every AI conversation from scratch, you build a workspace that Claude already understands. It knows your business, watches your numbers, reads your emails and meetings, and helps you stay on top of everything — automatically.
 
-Everything runs locally on your machine. Your data stays yours.
+You build it in layers. Each layer makes Claude more useful. And every layer you add is yours to keep.
 
 ---
 
-## What It Does
+## How It Works
 
-Once fully installed, AIOS gives you:
+Your AIOS lives in a folder on your computer. Inside that folder are files that Claude reads at the start of every session — who you are, what your business does, what you're focused on right now, and what tools are available. The better those files are, the smarter Claude gets.
 
-| Capability | What you get |
-|-----------|-------------|
-| **Session context** | Every Claude session starts knowing who you are, what your business is, and what you're working on |
-| **Live metrics** | YouTube subscribers, Stripe revenue, email counts — collected daily into a local database |
-| **Daily brief** | A structured morning intelligence report delivered to your phone by 7 AM |
-| **Email digest** | Noise-filtered Gmail and Outlook emails surfaced in every brief |
-| **Meeting summaries** | Fireflies transcripts ingested, searchable, included in your brief |
-| **Telegram bot** | Ask business questions, query metrics, capture tasks — from your phone |
-| **GTD task system** | Capture inbox, process actions, manage projects, run weekly reviews |
-| **Slash commands** | `/start`, `/pulse`, `/process`, `/review`, `/audit`, `/tune` and more |
+The CRAFT Framework is how those layers are organized:
+
+```
+C — Context     → Claude knows your business
+R — Reach       → Claude sees your live data
+A — Actions     → Claude synthesizes it into a daily brief
+F — Flow        → Claude manages tasks and talks to you from your phone
+T — Tuning      → Claude gets better over time
+```
+
+You don't have to build all five layers. Every layer you complete is independently useful from the moment it's done.
 
 ---
 
-## How to Install
+## How to Get Started
 
-AIOS installs in layers called **nodes**. Each node is independent — install what you need, skip what you don't.
+Everything installs through Claude Code. Clone this repo, open the folder in Claude Code, and run:
 
-**Prerequisites:**
-- [Claude Code](https://claude.ai/code) installed
-- Python 3.10+ with a virtual environment (`python -m venv .venv`)
-- Git
-
-**Clone the repo:**
-```bash
-git clone https://github.com/TommyChryst/AIOS.git your-aios
-cd your-aios
-
-python -m venv .venv
-.venv\Scripts\activate        # Windows
-# source .venv/bin/activate   # Mac/Linux
-
-pip install -r requirements.txt
-```
-
-**Installation order (recommended):**
-
-```
-1. Vault Node        → creates the workspace structure
-2. Context Node      → teaches the AI who you are
-3. Intelligence Node → connects your data sources
-4. Coffee Debrief Node → generates your morning brief
-5. Mobile Node       → adds Telegram access from your phone
-6. Productivity Node → adds GTD task management
-```
-
-**To install any node, open Claude Code and run:**
 ```
 /install core-node-installs/01-vault-node
 ```
 
-Claude will ask you setup questions tailored to your business, then build everything configured for your specific answers. You don't need to install all nodes — stop at any layer that gives you what you need.
+Claude will walk you through setup step by step — asking questions about your business, your tools, and what you want to track. You don't need to figure anything out in advance. Just answer the questions and Claude builds it.
+
+**Install the nodes in order:**
+
+| # | Node | What you get |
+|---|------|-------------|
+| 01 | [Vault Node](core-node-installs/01-vault-node/) | Your workspace structure and foundation |
+| 02 | [Context Node](core-node-installs/02-context-node/) | Claude learns your business inside and out |
+| 03 | [Intelligence Node](core-node-installs/03-intelligence-node/) | Claude starts seeing your live business data |
+| 04 | [Coffee Debrief Node](core-node-installs/04-coffee-debrief-node/) | A morning brief delivered to your phone every day |
+| 05 | [Mobile Node](core-node-installs/05-mobile-node/) | Full access to your AI from Telegram |
+| 06 | [Productivity Node](core-node-installs/06-productivity-node/) | Task management and weekly reviews |
+
+You don't have to install all of them. Stop at any point — what you've built is already working.
 
 ---
 
-## How to Know It's Working
+## What You Can Do Once It's Running
 
-After all nodes are installed, run this in Claude Code:
-```
-/audit
-```
-
-This scores your AIOS across all 5 layers (0–100). A fully working system scores 80+.
-
-**Day-to-day signals:**
-- `/start` gives you a session summary with your actual business metrics
-- You receive a morning brief in Telegram by 7 AM
-- `/pulse` returns live numbers from your connected data sources
-- `/process` clears your task inbox
-
----
-
-## What to Expect
-
-**Week 1** — 2–3 hours of setup across nodes and API connections. By the end, you have a working daily brief and Claude knows your business.
-
-**Week 2** — The system builds a data history. You start seeing trends. The morning brief gets more useful.
-
-**Month 1** — You're running weekly GTD reviews, triaging email faster, and delegating routine thinking to Claude inside sessions.
-
-**Ongoing** — Run `/tune` monthly for improvement recommendations. Run `/audit` quarterly to measure AIOS health and find gaps.
-
----
-
-## What You Have to Do Yourself
-
-AIOS automates a lot but requires human setup for anything that touches external accounts:
-
-| Task | Frequency |
-|------|-----------|
-| Create API keys (YouTube, Stripe, Telegram, etc.) | One-time per source |
-| Run Gmail/Outlook OAuth authorization | One-time per account |
-| Fill in CRAFT.md (your business context) | One-time, update as things change |
-| Schedule the daily Windows Task or cron job | One-time |
-| Review your GTD system weekly | Weekly (30–60 min) |
-| Update `context/strategy.md` when priorities shift | Monthly |
-
-The system is only as useful as what you put into it. CRAFT.md is your foundation — keep it current and honest.
-
----
-
-## The CRAFT Framework
-
-```
-C — Context     → CRAFT.md, identity, business, voice, strategy
-R — Reach       → Data collectors, SQLite database, metrics.md
-A — Actions     → Daily brief, email triage, meeting intelligence
-F — Flow        → GTD task management, Telegram bot, weekly review
-T — Tuning      → Audit, tune, changelog, brief archive
-```
-
-Each letter is a layer. Each layer is built by one or more nodes. You build in order — but each layer is independently useful the moment it's done.
-
----
-
-## Core Node Installs
-
-| # | Node | Layer | What it adds |
-|---|------|-------|-------------|
-| 01 | [Vault Node](core-node-installs/01-vault-node/) | Infra | Workspace structure, CRAFT.md, Python environment |
-| 02 | [Context Node](core-node-installs/02-context-node/) | C | Identity, business context, voice, AI conversation import |
-| 03 | [Intelligence Node](core-node-installs/03-intelligence-node/) | R | Data collectors, SQLite database, daily metrics |
-| 04 | [Coffee Debrief Node](core-node-installs/04-coffee-debrief-node/) | A | Daily brief generation and Telegram delivery |
-| 05 | [Mobile Node](core-node-installs/05-mobile-node/) | F | Telegram bot — full AIOS access from your phone |
-| 06 | [Productivity Node](core-node-installs/06-productivity-node/) | F | GTD task system, inbox, projects, weekly review |
-
----
-
-## Available Skills (Slash Commands)
-
-Skills are installed automatically — no setup required. Open Claude Code and start using them.
+Once your AIOS is set up, you have a set of commands available in Claude Code at all times:
 
 | Command | What it does |
 |---------|-------------|
-| `/start` | Load full context, show metrics, begin session |
-| `/pulse` | Live snapshot of key business metrics |
-| `/process` | Process GTD inbox to zero |
-| `/review` | Guided weekly GTD review |
-| `/email-triage` | Classify and draft replies for your inbox |
-| `/audit` | Score your AIOS across all 5 layers |
-| `/tune` | Get prioritized improvement recommendations |
-| `/create-plan` | Plan a new feature or change before building |
-| `/implement` | Execute a plan step by step |
+| `/start` | Start your session — Claude loads your context and shows you what's happening |
+| `/pulse` | Get a live snapshot of your business numbers |
+| `/process` | Clear your task inbox — Claude routes everything to the right place |
+| `/review` | Guided weekly review of everything on your plate |
+| `/email-triage` | Claude reads your inbox and drafts replies in your voice |
+| `/audit` | Score how complete and healthy your AIOS is |
+| `/tune` | Get recommendations for what to improve or automate next |
 | `/install` | Install a node |
-| `/share` | Package a system to share with others |
-| `/prime` | Re-initialize session context |
+
+---
+
+## What You'll Need to Do Yourself
+
+Claude does the heavy lifting, but there are a few things only you can do:
+
+- **Connect your accounts** — YouTube, Stripe, Gmail, Telegram. Claude tells you exactly what to get and where to find it, but you'll need to log in and grab the keys yourself.
+- **Fill in your context** — Claude will ask you questions during setup, but the better you answer them, the better your AIOS will be. Be honest and specific.
+- **Show up weekly** — The task system only works if you review it. Thirty minutes a week keeps everything running.
+
+That's it. Everything else Claude handles.
 
 ---
 
@@ -180,4 +96,4 @@ This repo accompanies the full CRAFT course on YouTube.
 
 ## License
 
-MIT — use it, fork it, build on it. Attribution appreciated but not required.
+MIT — use it, fork it, build on it.
