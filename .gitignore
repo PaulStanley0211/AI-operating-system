@@ -1,0 +1,41 @@
+# Secrets — never commit these
+.env
+*.key
+*.pem
+*.secret
+token.json
+msal_token_cache.json
+
+# Databases — stay local
+reach/data/*.db
+reach/data/*.db-journal
+reach/data/*.db-wal
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.temp

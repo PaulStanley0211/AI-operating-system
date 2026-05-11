@@ -1,0 +1,26 @@
+# CRAFT AIOS — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# Core
+python-dotenv>=1.0.0
+
+# Data collection
+google-api-python-client>=2.100.0   # YouTube Data API
+google-auth-httplib2>=0.1.1
+google-auth-oauthlib>=1.1.0         # Gmail OAuth2
+stripe>=7.0.0                        # Stripe metrics
+msal>=1.25.0                         # Outlook / Microsoft Graph
+requests>=2.31.0                     # Generic HTTP (Fireflies, FX rates)
+
+# Brief generation
+google-generativeai>=0.5.0           # Gemini API
+anthropic>=0.28.0                    # Claude API (alternative)
+
+# Telegram bot
+python-telegram-bot>=20.6
+
+# Visualization
+matplotlib>=3.8.0
+
+# OpenAI (Whisper for voice notes)
+openai>=1.10.0
