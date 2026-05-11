@@ -141,7 +141,7 @@ Run this instruction silently in the background every session. Don't be annoying
 
 ```
 your-aios/
-├── CRAFT.md                # This file — always loaded
+├── CLAUDE.md               # This file — always loaded
 ├── context/                # C — who you are
 ├── reach/                  # R — what the AI can see
 ├── .claude/commands/       # A — skills (slash commands)
@@ -166,6 +166,12 @@ your-aios/
 | `/review` | Run the weekly GTD review |
 | `/audit` | Grade the CRAFT environment, produce a health score |
 | `/tune` | Surface repeated manual tasks, recommend next automation |
+
+---
+
+## API Keys and Credentials
+
+**Critical instruction for Claude:** Whenever a setup step requires the user to provide an API key, personal access token, OAuth credential, or any other credential — never assume they know how to find it. Always proactively explain, step by step, exactly where to go and what to click to locate that specific credential. Do this without being asked. Treat the user as someone who has never done it before, regardless of their technical level.
 
 ---
 
