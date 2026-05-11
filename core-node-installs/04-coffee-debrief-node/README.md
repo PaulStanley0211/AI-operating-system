@@ -97,10 +97,10 @@ The Mobile Node (Telegram bot) must be installed before the Coffee Debrief can d
 
 Once Coffee Debrief is running:
 ```
-/install node-installs/mobile-node
+/install core-node-installs/05-mobile-node
 ```
 
 Or if Mobile Node is already installed, move to:
 ```
-/install node-installs/productivity-node
+/install core-node-installs/06-productivity-node
 ```

@@ -94,10 +94,10 @@ Voice note support adds a meaningful level of convenience — hold record, speak
 
 Once Mobile is running, install the Coffee Debrief to get your morning brief delivered:
 ```
-/install node-installs/coffee-debrief-node
+/install core-node-installs/04-coffee-debrief-node
 ```
 
 Or move to task management:
 ```
-/install node-installs/productivity-node
+/install core-node-installs/06-productivity-node
 ```

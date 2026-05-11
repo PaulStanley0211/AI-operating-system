@@ -150,7 +150,7 @@ Never share your bot token. If compromised, revoke it immediately via @BotFather
 
 Install the Coffee Debrief Node to receive your morning brief in Telegram:
 ```
-/install node-installs/coffee-debrief-node
+/install core-node-installs/04-coffee-debrief-node
 ```
 
 ---

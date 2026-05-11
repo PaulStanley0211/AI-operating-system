@@ -92,5 +92,5 @@ The context files are yours to edit any time. Update `context/strategy.md` each 
 
 Once Context is done:
 ```
-/install node-installs/intelligence-node
+/install core-node-installs/03-intelligence-node
 ```

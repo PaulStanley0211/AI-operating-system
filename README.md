@@ -70,7 +70,7 @@ pip install -r requirements.txt
 
 **To install any node, open Claude Code and run:**
 ```
-/install node-installs/vault-node
+/install core-node-installs/01-vault-node
 ```
 
 Claude will ask you setup questions tailored to your business, then build everything configured for your specific answers. You don't need to install all nodes — stop at any layer that gives you what you need.
@@ -137,16 +137,16 @@ Each letter is a layer. Each layer is built by one or more nodes. You build in o
 
 ---
 
-## Available Nodes
+## Core Node Installs
 
-| Node | Layer | What it adds |
-|------|-------|-------------|
-| [Vault Node](node-installs/vault-node/) | Infra | Workspace structure, CRAFT.md, Python environment |
-| [Context Node](node-installs/context-node/) | C | Identity, business context, voice, AI conversation import |
-| [Intelligence Node](node-installs/intelligence-node/) | R | Data collectors, SQLite database, daily metrics |
-| [Coffee Debrief Node](node-installs/coffee-debrief-node/) | A | Daily brief generation and Telegram delivery |
-| [Mobile Node](node-installs/mobile-node/) | F | Telegram bot — full AIOS access from your phone |
-| [Productivity Node](node-installs/productivity-node/) | F | GTD task system, inbox, projects, weekly review |
+| # | Node | Layer | What it adds |
+|---|------|-------|-------------|
+| 01 | [Vault Node](core-node-installs/01-vault-node/) | Infra | Workspace structure, CRAFT.md, Python environment |
+| 02 | [Context Node](core-node-installs/02-context-node/) | C | Identity, business context, voice, AI conversation import |
+| 03 | [Intelligence Node](core-node-installs/03-intelligence-node/) | R | Data collectors, SQLite database, daily metrics |
+| 04 | [Coffee Debrief Node](core-node-installs/04-coffee-debrief-node/) | A | Daily brief generation and Telegram delivery |
+| 05 | [Mobile Node](core-node-installs/05-mobile-node/) | F | Telegram bot — full AIOS access from your phone |
+| 06 | [Productivity Node](core-node-installs/06-productivity-node/) | F | GTD task system, inbox, projects, weekly review |
 
 ---
 

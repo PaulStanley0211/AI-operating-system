@@ -82,5 +82,5 @@ That's it. Vault is pure structure — no external APIs, no credentials required
 
 Once Vault is done:
 ```
-/install node-installs/context-node
+/install core-node-installs/02-context-node
 ```

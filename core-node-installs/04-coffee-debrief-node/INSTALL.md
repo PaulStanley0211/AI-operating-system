@@ -149,12 +149,12 @@ Sections you can add:
 
 Install the Mobile Node if you haven't already (required for delivery):
 ```
-/install node-installs/mobile-node
+/install core-node-installs/05-mobile-node
 ```
 
 Install the Productivity Node for GTD task management:
 ```
-/install node-installs/productivity-node
+/install core-node-installs/06-productivity-node
 ```
 
 ---

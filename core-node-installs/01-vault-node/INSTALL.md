@@ -114,7 +114,7 @@ Who I'm Working With: [Your name], [your role]..."
 
 Install the Context Node to give the AI deep knowledge of your identity, business, and voice:
 ```
-/install node-installs/context-node
+/install core-node-installs/02-context-node
 ```
 
 ---

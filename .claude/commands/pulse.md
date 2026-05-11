@@ -13,7 +13,7 @@ version: 1.0.0
 Check if `reach/data/data.db` exists. If not:
 ```
 Intelligence Node not installed yet. Set it up first to connect your data sources.
-See: node-installs/intelligence-node/INSTALL.md
+See: core-node-installs/03-intelligence-node/INSTALL.md
 ```
 Stop here.
 

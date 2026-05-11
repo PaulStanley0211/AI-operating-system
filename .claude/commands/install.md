@@ -10,7 +10,7 @@ version: 1.1.0
 
 ## Step 1: Locate and Read the Node
 
-Parse the path from the user's command (e.g., `/install node-installs/intelligence-node`).
+Parse the path from the user's command (e.g., `/install core-node-installs/03-intelligence-node`).
 
 Read the following files from that folder:
 - `INSTALL.md` — required. If missing, stop and say: "This folder doesn't have an INSTALL.md. CRAFT nodes need an INSTALL.md to be installed with /install."

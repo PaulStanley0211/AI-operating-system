@@ -131,7 +131,7 @@ Ask: "Write me a 3-sentence email to a prospective client." The response should 
 
 Connect data sources so the AI can see what's happening in your business:
 ```
-/install node-installs/intelligence-node
+/install core-node-installs/03-intelligence-node
 ```
 
 ---

@@ -108,5 +108,5 @@ You only do the tasks for sources you confirmed in setup. If you said no to Stri
 
 Once Intelligence is running:
 ```
-/install node-installs/coffee-debrief-node
+/install core-node-installs/04-coffee-debrief-node
 ```

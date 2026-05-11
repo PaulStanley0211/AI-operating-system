@@ -161,12 +161,12 @@ Add the ones matching your connected sources. Start with just one — YouTube is
 
 Install the Coffee Debrief Node to turn your data into a morning brief delivered to Telegram:
 ```
-/install node-installs/coffee-debrief-node
+/install core-node-installs/04-coffee-debrief-node
 ```
 
 Or install the Mobile Node to get phone access first:
 ```
-/install node-installs/mobile-node
+/install core-node-installs/05-mobile-node
 ```
 
 ---
