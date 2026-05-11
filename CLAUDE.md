@@ -1,4 +1,4 @@
-# CRAFT.md
+# CLAUDE.md
 <!-- v1.0.0 -->
 
 > This is your AI Operating System's master context file. It is automatically loaded every session.
