@@ -2,7 +2,7 @@
 <!-- v1.0.0 -->
 
 > Layer: R (Reach)
-> Connects your data sources. Collects metrics daily. Generates the morning brief.
+> Connects your data sources. Collects metrics daily. Makes your business data visible to the AI.
 
 ---
 
@@ -28,11 +28,10 @@ Ask these before doing anything. Each answer determines which collectors get set
 4. **Do you use any meeting transcription tool — like Fireflies, Otter, or something similar?**
    *(Fireflies = set up Fireflies collector. Other = mention it's not supported yet. None = skip)*
 
-5. **Are you on Windows, Mac, or Linux?**
-   *(Determines which scheduler setup to walk through — Task Scheduler XML vs cron)*
-
 Only install collectors for sources the user confirmed. Don't ask for API keys for services they don't use.
 After collecting answers, show a summary: "We'll connect: [list]. Skipping: [list]."
+
+Scheduling the collector to run automatically each morning is set up in the Mobile Node (Flow layer) — skip that here.
 
 ---
 
@@ -132,19 +131,7 @@ Add the ones matching your connected sources. Start with just one — YouTube is
    ```
    Opens `reach/metrics.md` — should show your connected data.
 
-10. **Schedule the daily collection:**
-
-    **Windows (Task Scheduler):**
-    - Import `flow/schedules/DataOS-collect.xml`
-    - Or: create a task that runs `python reach/collectors/collect.py` at 6:00 AM daily
-
-    **Mac/Linux (cron):**
-    ```bash
-    crontab -e
-    # Add:
-    0 6 * * * cd /path/to/your-aios && .venv/bin/python reach/collectors/collect.py
-    10 6 * * * cd /path/to/your-aios && .venv/bin/python reach/generate_metrics.py
-    ```
+> Scheduling the collector to run automatically each morning is covered in the Mobile Node. For now, run it manually to verify everything works.
 
 ---
 
@@ -159,14 +146,14 @@ Add the ones matching your connected sources. Start with just one — YouTube is
 
 ## Next Steps
 
-Install the Coffee Debrief Node to turn your data into a morning brief delivered to Telegram:
+Install the Mobile Node to get phone access and set up your Telegram command center:
 ```
-/install core-node-installs/04-coffee-debrief-node
+/install core-node-installs/04-mobile-node
 ```
 
-Or install the Mobile Node to get phone access first:
+Then install the Coffee Debrief Node to receive your morning brief in Telegram:
 ```
-/install core-node-installs/05-mobile-node
+/install core-node-installs/05-coffee-debrief-node
 ```
 
 ---

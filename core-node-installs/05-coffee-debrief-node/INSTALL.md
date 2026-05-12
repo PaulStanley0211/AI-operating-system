@@ -1,7 +1,7 @@
 # Coffee Debrief Node — Install Guide
 <!-- v1.0.0 -->
 
-> Layer: A (Actions)
+> Layer: F (Flow)
 > Synthesizes all collected data into a daily morning brief and delivers it to Telegram.
 
 ---
@@ -54,7 +54,7 @@ Use these answers to set .env values and configure the scheduler before proceedi
 | `GEMINI_API_KEY` | LLM for brief generation | aistudio.google.com → Get API Key |
 | `ANTHROPIC_API_KEY` | Alternative LLM (if `BRIEF_LLM=claude`) | console.anthropic.com |
 | `TELEGRAM_BOT_TOKEN` | Your Telegram bot | @BotFather on Telegram |
-| `TELEGRAM_CHAT_ID` | Your Telegram chat ID | @userinfobot on Telegram |
+| `TELEGRAM_GROUP_ID` | Your Telegram group ID | From Mobile Node install — negative number starting with -100 |
 | `BRIEF_LLM` | `gemini` or `claude` (default: gemini) | Set in .env |
 | `BRIEF_PRESET` | `founder` or `operator` (default: founder) | Set in .env |
 | `DASHBOARD_METRIC` | Metric to chart (default: `youtube_subscribers`) | Set in .env |
@@ -78,7 +78,7 @@ Use these answers to set .env values and configure the scheduler before proceedi
 1. **Add API keys to `.env`:**
    - `GEMINI_API_KEY` (recommended — cheapest option, ~$0.005/brief)
    - OR `ANTHROPIC_API_KEY` and set `BRIEF_LLM=claude`
-   - `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` (from Mobile Node install)
+   - `TELEGRAM_BOT_TOKEN` and `TELEGRAM_GROUP_ID` (already in `.env` from Mobile Node install)
 
 2. **Test the prompt assembler:**
    ```bash
@@ -120,8 +120,9 @@ Use these answers to set .env values and configure the scheduler before proceedi
    **Mac/Linux (cron):**
    ```bash
    # Runs after collectors at 6:00 AM
-   0 7 * * * cd /path/to/your-aios && .venv/bin/python flow/brief/daily_brief.py
+   0 7 * * * cd __WORKSPACE_ROOT__ && __VENV_PYTHON__ flow/brief/daily_brief.py
    ```
+   Replace `__WORKSPACE_ROOT__` with the absolute path to your workspace folder, and `__VENV_PYTHON__` with the path to `.venv/bin/python`.
 
 ---
 
@@ -146,11 +147,6 @@ Sections you can add:
 ---
 
 ## Next Steps
-
-Install the Mobile Node if you haven't already (required for delivery):
-```
-/install core-node-installs/05-mobile-node
-```
 
 Install the Productivity Node for GTD task management:
 ```

@@ -8,22 +8,22 @@
 
 ## What This Node Does
 
-Completes the Context layer: fills in CRAFT.md, populates context/ files, imports conversation history, and sets up voice samples. After this node, the AI behaves like a senior team member from the first message of every session.
+Completes the Context layer: fills in CLAUDE.md, populates context/ files, imports conversation history, and sets up voice samples. After this node, the AI behaves like a senior team member from the first message of every session.
 
 ---
 
 ## Setup Questions
 
-Ask these before doing anything. Use the answers to customize the context files and CRAFT.md.
+Ask these before doing anything. Use the answers to customize the context files and CLAUDE.md.
 
 1. **How would you describe your business to someone who's never heard of it? One or two sentences.**
-   *(This becomes the core of context/business.md and CRAFT.md — get it right upfront)*
+   *(This becomes the core of context/business.md and CLAUDE.md — get it right upfront)*
 
 2. **Who is your customer and what problem do you solve for them?**
    *(Fills the customer persona and value prop sections in context/business.md)*
 
 3. **Which email client do you use — Gmail, Outlook, or both?**
-   *(Configures the email profile in CRAFT.md)*
+   *(Configures the email profile in CLAUDE.md)*
 
 4. **How would you describe your communication style? Pick the closest: Direct and brief / Warm and conversational / Detailed and thorough**
    *(Seeds the voice section — the AI will match this style when writing on your behalf)*
@@ -34,13 +34,13 @@ Ask these before doing anything. Use the answers to customize the context files 
 6. **What are the 2–3 things you're most focused on right now in your business?**
    *(Pre-fills context/strategy.md so /start surfaces your real priorities immediately)*
 
-Use these answers to fill in CRAFT.md and context/ files now — don't leave [FILL IN] markers for things the user just told you.
+Use these answers to fill in CLAUDE.md and context/ files now — don't leave [FILL IN] markers for things the user just told you.
 
 ---
 
 ## Prerequisites
 
-- [ ] Vault Node installed and CRAFT.md filled in
+- [ ] Vault Node installed and CLAUDE.md filled in
 - [ ] Python 3.10+ installed
 - [ ] Claude account (for conversation export) or ChatGPT account
 
@@ -69,9 +69,9 @@ None for the core install. Optional:
 
 ---
 
-## CRAFT.md Updates
+## CLAUDE.md Updates
 
-The following sections of CRAFT.md should be completed during this install:
+The following sections of CLAUDE.md should be completed during this install:
 - `## About Me`
 - `## The Business`
 - `## Team`
@@ -111,8 +111,8 @@ The following sections of CRAFT.md should be completed during this install:
    - Run: `python context/scripts/import_chatgpt.py path/to/conversations.json`
    - Imports saved to `context/references/conversations/chatgpt/`
 
-8. **Update CRAFT.md:**
-   Copy the key identity/business/email profile details into CRAFT.md so they load every session.
+8. **Update CLAUDE.md:**
+   Copy the key identity/business/email profile details into CLAUDE.md so they load every session.
 
 ---
 
