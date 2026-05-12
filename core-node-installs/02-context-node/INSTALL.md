@@ -22,8 +22,8 @@ Ask these before doing anything. Use the answers to customize the context files 
 2. **Who is your customer and what problem do you solve for them?**
    *(Fills the customer persona and value prop sections in context/business.md)*
 
-3. **Which email client do you use — Gmail, Outlook, or both?**
-   *(Configures the email profile in CLAUDE.md)*
+3. **How do you use email at work? What types of messages typically land in your inbox, which do you want ignored, and which always need a reply?**
+   *(Fills the Email Profile section in CLAUDE.md — this is behavioral, not technical. The Intelligence Node handles which collector to install.)*
 
 4. **How would you describe your communication style? Pick the closest: Direct and brief / Warm and conversational / Detailed and thorough**
    *(Seeds the voice section — the AI will match this style when writing on your behalf)*

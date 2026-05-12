@@ -21,13 +21,10 @@ Ask these before doing anything. Use the answers to configure the install.
 1. **Are you working solo, or do you have a team?**
    *(Solo = simplify team.md. Team = set up proper roles section)*
 
-2. **What operating system are you on — Windows, Mac, or Linux?**
-   *(Determines deployment instructions in later nodes — Task Scheduler vs cron vs launchd)*
-
-3. **Do you already have a GitHub account and a personal access token?**
+2. **Do you already have a GitHub account and a personal access token?**
    *(Yes = skip account setup. No = walk through creating both before proceeding)*
 
-Use the OS answer to tailor any platform-specific instructions throughout the install. Identity and business questions come in the Context Node.
+Identity and business questions come in the Context Node. Platform and deployment questions come in the Mobile Node.
 
 ---
 
