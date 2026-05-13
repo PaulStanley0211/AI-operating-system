@@ -16,22 +16,19 @@ Completes the Context layer: fills in CLAUDE.md, populates context/ files, impor
 
 Ask these before doing anything. Use the answers to customize the context files and CLAUDE.md.
 
-1. **How would you describe your business to someone who's never heard of it? One or two sentences.**
-   *(This becomes the core of context/business.md and CLAUDE.md — get it right upfront)*
+1. **Tell me about your business — what you do, who you serve, what you sell, and how you make money. Take as much space as you need.**
+   *(No structure required — just describe it like you would to someone who asked. This fills context/business.md and the core of CLAUDE.md.)*
 
-2. **Who is your customer and what problem do you solve for them?**
-   *(Fills the customer persona and value prop sections in context/business.md)*
+2. **How do you use email at work? What types of messages typically land in your inbox, which do you want ignored, and which always need a reply?**
+   *(Fills the Email Profile section in CLAUDE.md — behavioral description, not technical config. Intelligence Node handles which collector to install.)*
 
-3. **How do you use email at work? What types of messages typically land in your inbox, which do you want ignored, and which always need a reply?**
-   *(Fills the Email Profile section in CLAUDE.md — this is behavioral, not technical. The Intelligence Node handles which collector to install.)*
-
-4. **How would you describe your communication style? Pick the closest: Direct and brief / Warm and conversational / Detailed and thorough**
+3. **How would you describe your communication style? Pick the closest: Direct and brief / Warm and conversational / Detailed and thorough**
    *(Seeds the voice section — the AI will match this style when writing on your behalf)*
 
-5. **Do you have existing AI conversation history to import — from Claude, ChatGPT, both, or neither?**
+4. **Do you have existing AI conversation history to import — from Claude, ChatGPT, both, or neither?**
    *(Yes = run the relevant import scripts. No = skip that step entirely)*
 
-6. **What are the 2–3 things you're most focused on right now in your business?**
+5. **What are the 2–3 things you're most focused on right now in your business?**
    *(Pre-fills context/strategy.md so /start surfaces your real priorities immediately)*
 
 Use these answers to fill in CLAUDE.md and context/ files now — don't leave [FILL IN] markers for things the user just told you.

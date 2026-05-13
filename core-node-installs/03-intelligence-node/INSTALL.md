@@ -16,19 +16,16 @@ Installs data collectors that pull from your business APIs on a schedule, stores
 
 Ask these before doing anything. Each answer determines which collectors get set up and which get skipped.
 
-1. **Do you have a YouTube channel you want to track?**
-   *(Yes = set up YouTube collector. No = skip entirely — don't ask for a YouTube API key)*
+1. **What tools and platforms does your business run on — anything that has data you'd want to see in a morning dashboard? Think: revenue, customers, content, marketing, operations. List whatever comes to mind.**
+   *(Use this to match against available collectors. Only set up what they actually use — don't install collectors for things they didn't mention.)*
 
-2. **Do you use a payment processor for revenue? Which one — Stripe, something else, or none yet?**
-   *(Stripe = set up Stripe collector. Something else = note it, skip for now. None = skip)*
+2. **Which email do you use for business — Gmail, Outlook/Microsoft 365, both, or something else?**
+   *(Gmail = set up Gmail collector. Outlook = set up Outlook collector. Both = set up both. Something else = skip for now.)*
 
-3. **Which email do you use for business — Gmail, Outlook/Microsoft 365, both, or something else?**
-   *(Sets up the relevant email collector. Both = set up both. Something else = skip email collection for now)*
+3. **Do you use any tool that records or transcribes your meetings?**
+   *(Fireflies = set up Fireflies collector. Other tools = note it's not supported yet. None = skip.)*
 
-4. **Do you use any meeting transcription tool — like Fireflies, Otter, or something similar?**
-   *(Fireflies = set up Fireflies collector. Other = mention it's not supported yet. None = skip)*
-
-Only install collectors for sources the user confirmed. Don't ask for API keys for services they don't use.
+Only install collectors for sources the user confirmed. Don't ask for API keys for services they didn't mention.
 After collecting answers, show a summary: "We'll connect: [list]. Skipping: [list]."
 
 Scheduling the collector to run automatically each morning is set up in the Mobile Node (Flow layer) — skip that here.
