@@ -1,5 +1,5 @@
 # Vault Node — Install Guide
-<!-- v1.0.0 -->
+<!-- v1.1.0 -->
 
 > Layer: INFRA | Must be installed first.
 > Installs the workspace structure, initializes git, and connects to GitHub.
@@ -106,4 +106,5 @@ Install the Context Node to teach the AI who you are, what your business does, a
 
 | Version | Date | Notes |
 |---------|------|-------|
+| 1.1.0 | 2026-05-12 | Removed OS question (belongs in Mobile Node) |
 | 1.0.0 | Initial release | Base vault structure |

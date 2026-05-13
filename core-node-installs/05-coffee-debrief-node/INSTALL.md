@@ -1,5 +1,5 @@
 # Coffee Debrief Node — Install Guide
-<!-- v1.0.0 -->
+<!-- v1.1.0 -->
 
 > Layer: F (Flow)
 > Synthesizes all collected data into a daily morning brief and delivers it to Telegram.
@@ -159,4 +159,5 @@ Install the Productivity Node for GTD task management:
 
 | Version | Date | Notes |
 |---------|------|-------|
+| 1.1.0 | 2026-05-12 | Moved after Mobile Node (now 05); layer updated A→F; TELEGRAM_CHAT_ID→TELEGRAM_GROUP_ID; scheduler paths use __WORKSPACE_ROOT__ placeholder |
 | 1.0.0 | Initial release | Gemini + Claude options, founder + operator presets |

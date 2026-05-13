@@ -1,5 +1,5 @@
 # Context Node — Install Guide
-<!-- v1.0.0 -->
+<!-- v1.2.0 -->
 
 > Layer: C (Context)
 > Teaches the AI who you are, what your business does, and how to sound like you.
@@ -143,4 +143,6 @@ Connect data sources so the AI can see what's happening in your business:
 
 | Version | Date | Notes |
 |---------|------|-------|
+| 1.2.0 | 2026-05-12 | Rewrote setup questions around universal business operations — sales, delivery, admin; email question reframed as behavioral |
+| 1.1.0 | 2026-05-12 | Merged business description questions into one open prompt; email question made distinct from Intelligence Node |
 | 1.0.0 | Initial release | Core context layer |

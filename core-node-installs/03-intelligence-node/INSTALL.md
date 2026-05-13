@@ -1,5 +1,5 @@
 # Intelligence Node — Install Guide
-<!-- v1.0.0 -->
+<!-- v1.1.0 -->
 
 > Layer: R (Reach)
 > Connects your data sources. Collects metrics daily. Makes your business data visible to the AI.
@@ -159,4 +159,5 @@ Then install the Coffee Debrief Node to receive your morning brief in Telegram:
 
 | Version | Date | Notes |
 |---------|------|-------|
+| 1.1.0 | 2026-05-12 | Removed scheduler setup (belongs in Mobile Node); replaced platform-specific data source questions with open "what tools do you use?" prompt |
 | 1.0.0 | Initial release | YouTube + Stripe + Gmail + Outlook + Fireflies + FX |
