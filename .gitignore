@@ -5,6 +5,8 @@
 *.secret
 token.json
 msal_token_cache.json
+credentials.json
+gmail_credentials.json
 
 # Databases — stay local
 reach/data/*.db

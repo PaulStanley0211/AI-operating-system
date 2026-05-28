@@ -39,7 +39,7 @@ def main():
         token_path.parent.mkdir(parents=True, exist_ok=True)
         token_path.write_text(creds.to_json())
 
-    print(f"✅ Gmail authorized. Token saved to {GMAIL_TOKEN_PATH}")
+    print(f"Gmail authorized. Token saved to {GMAIL_TOKEN_PATH}")
     print("You can now run: python reach/collectors/gmail.py")
 
 
