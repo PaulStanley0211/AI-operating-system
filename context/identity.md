@@ -7,43 +7,48 @@
 
 ## Name
 
-[FILL IN — your full name]
+Paul Stanley Ganganapalli (goes by **Paul**; GitHub: PaulStanley0211)
 
 ## Role
 
-[FILL IN — your title or how you'd describe yourself. Examples: "Founder of Acme Inc.", "Consultant and content creator", "Operations lead at StartupName"]
+Solo AI engineer & automation builder. No agency, no team — just me.
 
 ## Background
 
-[FILL IN — 3–5 sentences on your professional background. What did you do before this? What have you built? What are you known for?]
+**Portfolio:** https://www.paulstanley.dev (positioning: "I build production-grade AI agent systems, not demos.")
+
+My path: mechanical engineer by training, then trader, now AI agent engineering. Each step built a different muscle: precision, decision-making under uncertainty, and the discipline to ship. Trading taught me that decisions under uncertainty need rules, audit trails, and risk limits built in, and I bring that into the AI systems I build.
+
+I design and ship end-to-end AI systems: data/RAG pipelines, multi-agent workflows (LangGraph), and custom automations built with Claude Code and the Anthropic API. I also build AI-powered websites, including 3D-animated ones. ~35 GitHub repos span agentic systems, RAG, multi-agent orchestration, full-stack apps (Next.js / React / FastAPI), and finance/equity agents. Featured work: FinAlly (multi-user trading workstation), QuantFlow (8-agent DAX 40 workflow), Predictive Maintenance (4-agent LangGraph), a bilingual Knowledge-Management RAG, a Gmail-integrated Customer Complaints Agent, a Production RAG System, and Prelegal. Right now I'm building this AIOS as a portfolio + learning project.
 
 ## What I'm Building Toward
 
-[FILL IN — your 2–5 year vision. Not a mission statement — just what you're actually trying to create.]
+Learn how to build AI operating systems well, then build them for small businesses and startups (5–50 people) that want to be AI-ready but have no in-house AI team. Near-term, this AIOS doubles as proof-of-capability for pilot discovery calls and job interviews.
 
 ## What I Care About Most
 
-- [FILL IN — a value, outcome, or way of working you prioritize]
-- [FILL IN]
-- [FILL IN]
+- **Provable, measurable results:** time saved, real usage, not demos or vanity metrics
+- **Systems that compound:** they get smarter on a schedule, week over week
+- **Engineering that demonstrates real capability**, not surface-level polish
+- **Rules, audit trails, and risk limits built in** (a discipline carried over from trading)
 
 ## Strengths
 
-- [FILL IN — what you're genuinely good at]
-- [FILL IN]
+- Building agentic AI systems: RAG, multi-agent orchestration, custom automations
+- Full-stack delivery (Next.js / React / FastAPI / LangGraph) and shipping fast with Claude Code
 
 ## Blind Spots / Weaknesses
 
-[FILL IN — things you know you're not great at, or areas where you need to be told when you're off track. Honest > polished.]
+_(Add when you want — tell the AI where to push back or slow you down.)_
 
 ## Working Style
 
-[FILL IN — how do you prefer to work? Examples: "High output in the morning, administrative in the afternoon." "I think best in writing, not verbally." "I like to move fast and fix things later."]
+Concise and technical by default — skip the hand-holding. Prefer to move fast and prove things with working artifacts.
 
 ## What Energizes Me
 
-[FILL IN — the type of work that gives you energy, not drains it]
+Building systems that visibly work and improve over time.
 
 ## What Drains Me
 
-[FILL IN — the type of work you avoid or find exhausting]
+_(Add when you want.)_

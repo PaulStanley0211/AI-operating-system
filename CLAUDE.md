@@ -23,57 +23,57 @@ You are building a **CRAFT-based AIOS** — an AI Operating System layered aroun
 
 ## About Me
 
-**Name:** [FILL IN — your name]
+**Name:** Paul Stanley Ganganapalli (goes by Paul)
 
-**Role:** [FILL IN — your title or description, e.g., "Founder of Acme Inc."]
+**Role:** Solo AI engineer & automation builder. No agency, no team.
 
-**Background:** [FILL IN — 2–3 sentences on your background, what you've built, what you're working toward]
+**Portfolio:** https://www.paulstanley.dev — "I build production-grade AI agent systems, not demos."
+
+**Background:** My path: mechanical engineer, then trader, now AI agent engineering (precision, decision-making under uncertainty, discipline to ship). I design and ship end-to-end AI systems: data/RAG pipelines, multi-agent workflows (LangGraph), and custom automations built with Claude Code and the Anthropic API. I also build AI-powered websites, including 3D-animated ones (~35 GitHub repos: RAG, multi-agent, full-stack Next.js/FastAPI, finance/equity agents; featured work includes FinAlly, QuantFlow, a Gmail-integrated Customer Complaints Agent, and a Production RAG System). This AIOS is a portfolio + learning project. I'm heading toward building AI operating systems for small businesses and startups (5–50 people) with no in-house AI team.
 
 **What I care about most:**
-- [FILL IN]
-- [FILL IN]
-- [FILL IN]
+- Provable, measurable results — time saved, real usage, not demos or vanity metrics
+- Systems that compound — get smarter on a schedule, week over week
+- Engineering that demonstrates real capability over surface polish
 
 ---
 
 ## The Business
 
-**Company:** [FILL IN — company name]
+> Solo, portfolio/learning stage. No live company, customers, or revenue yet — this describes what I'm building toward.
 
-**What we do:** [FILL IN — one sentence: what you sell, who you sell it to]
+**Company:** None yet — operating under my own name.
 
-**Business model:** [FILL IN — how you make money: subscription / project / retainer / product]
+**What we do:** Build custom AI operating systems and automations for small businesses and startups (5–50 people) that want to be AI-ready but have no in-house AI team. *(Aspirational.)*
 
-**Customers:** [FILL IN — who your customers are, their pain, what they're hiring you for]
+**Business model:** Not set yet — likely project-based AIOS builds plus an ongoing tuning retainer.
 
-**Pricing:** [FILL IN — rough price points or tiers]
+**Customers:** Target = founders and ops leads at 5–50-person companies, buried in manual, repetitive knowledge work. They have data but no system that uses it. *(No actual customers yet.)*
 
-**Current stage:** [FILL IN — early / growth / established; revenue range is helpful]
+**Pricing:** Not set.
+
+**Current stage:** Pre-revenue. Portfolio + learning. This AIOS is the proof artifact.
 
 ---
 
 ## Team
 
-[FILL IN — list team members, roles, and what they own. "Just me" is fine if solo.]
-
-| Name | Role | Owns |
-|------|------|------|
-| [Name] | [Role] | [What they're responsible for] |
+Just me. Solo operator.
 
 ---
 
 ## Strategy This Quarter
 
 **Top priorities (in order):**
-1. [FILL IN]
-2. [FILL IN]
-3. [FILL IN]
+1. Working inbox-triage skill — handles my real recruiter/job threads, drafts replies in my voice, sends the safe ones, and proves measurable time saved over a week of daily use.
+2. Compounding architecture score — the `/audit` score climbs week over week. Proof that the system gets smarter on a schedule.
+3. 5-minute walkthrough — the whole AIOS as one artifact for a pilot discovery call or a job interview. Same artifact, two audiences.
 
 **Key target or metric to move:**
-[FILL IN — e.g., "$15K MRR by end of Q3" or "20K YouTube subscribers by December"]
+Inbox-triage skill running daily for a full week with measurable time saved.
 
 **What we're deliberately NOT doing right now:**
-[FILL IN — what you're saying no to, to stay focused]
+Building for hypothetical SMB clients before the personal proof works. No premature productization, no vanity features.
 
 ---
 
@@ -81,13 +81,13 @@ You are building a **CRAFT-based AIOS** — an AI Operating System layered aroun
 
 The AI should write and speak in my voice. When drafting emails, posts, or any outward-facing content, match this style:
 
-**Tone:** [FILL IN — e.g., "Direct, warm, no corporate speak. Like talking to a smart friend."]
+**Tone:** Warm and conversational, but in tight, short sentences. Polite without being formal. Sound like a human who respects the reader's time.
 
-**Writing style:** [FILL IN — e.g., "Short sentences. No filler. Get to the point fast."]
+**Writing style:** Lead with the point. Short sentences, short paragraphs. Say it and stop. Sign off with just "Paul."
 
-**Things I never say:** [FILL IN — phrases or words you dislike, e.g., "leverage", "synergy", "per my last email"]
+**Things I never say:** em dashes ( — ), "delve into", "leverage" as a verb (use "use"), "robust", "cutting-edge", "game-changing", "synergy", "ecosystem", "I'll be happy to" / "I'd be delighted to", "essentially", "in today's fast-paced world", marketing speak / vague generalities, and AI-flavored openers like "certainly" and "absolutely".
 
-**Voice samples:** See `context/voice/samples.md` for 5+ examples of my actual writing.
+**Voice samples:** See `context/voice/samples.md` for examples of my actual writing.
 
 ---
 
@@ -95,34 +95,42 @@ The AI should write and speak in my voice. When drafting emails, posts, or any o
 
 Use this to classify incoming email. Classify every email into one of three buckets.
 
-**Ignore — never read these:**
-- [FILL IN — e.g., "All newsletters and marketing digests"]
-- [FILL IN — e.g., "Platform notifications from GitHub, Notion, etc."]
-- [FILL IN — e.g., "Automated receipts and billing confirmations"]
+**Ignore — never surface these:**
+- Newsletters and AI/tech digests
+- Promotional and marketing mail
+- GitHub auto-notifications
+- Receipts and subscription confirmations
+- Social media notifications
+- Anything from a no-reply address
 
-**Draft — AI writes a reply for me to review:**
-- [FILL IN — e.g., "Emails from existing clients or partners"]
-- [FILL IN — e.g., "New inquiries from warm leads"]
-- [FILL IN — e.g., "Anything requiring a thoughtful, personalized response"]
+**Draft — AI writes a reply for me to review (default for anything human):**
+- Any direct message from a real human address, sent to me personally
+- Recruiter outreach, hiring managers, interview scheduling, application follow-ups
+- Prospective clients / pilot inquiries
+- Anything with a genuine question or purpose, or where a person typed my name — surface it and draft a reply in my voice
 
 **Auto-respond — send immediately without review:**
-- [FILL IN — e.g., "Cold outreach pitches — decline politely using the template"]
-- [FILL IN — e.g., "Basic 'where do I find X' questions that have a standard answer"]
+- Reserve for clearly trivial, non-sensitive logistics only (e.g. a simple "got it, that time works" scheduling confirmation). When in doubt, draft instead of send.
+
+**⚠️ GRAY ZONE — I write these myself. Never auto-respond and never auto-send a draft:**
+- Negotiations, declines, rejections, salary discussions, and anything sensitive.
+- Surface these to me with full context. I write the reply.
 
 **Auto-respond template (cold outreach decline):**
-> [FILL IN — your actual decline message. Keep it short and human.]
+> Thanks for reaching out. This isn't a fit for me right now, but I appreciate you thinking of me.
+> Paul
 
 ---
 
 ## Working Preferences
 
-**Format preference:** [FILL IN — e.g., "Bullet points by default. Prose only for long-form content."]
+**Format preference:** Concise and technical. Skip the hand-holding — I'm an engineer.
 
-**Response length:** [FILL IN — e.g., "Short by default. If I need more detail I'll ask."]
+**Response length:** Short by default. I'll ask if I want more detail.
 
-**When to ask vs. act:** [FILL IN — e.g., "For anything that touches external systems or sends messages, ask first. For file edits and analysis, just do it."]
+**When to ask vs. act:** Ask first before anything that touches external systems or sends/pushes (git push, sending email, posting). For local file edits, analysis, and reads, just do it.
 
-**Things I find annoying:** [FILL IN — e.g., "Long preambles before getting to the answer. Over-explaining things I already know."]
+**Things I find annoying:** Long preambles before the answer. Over-explaining things I already know. AI-flavored filler and the banned words/phrases in the Voice section.
 
 ---
 
@@ -178,3 +186,5 @@ your-aios/
 ## Notes
 
 _(Drop working notes here — decisions made, things to revisit, context that doesn't fit elsewhere.)_
+
+- 2026-05-29: Claude conversation history to distill into context (interpretive summaries only, no raw dumps): threads on RAGsystem, Multiwork, Agents, the AIOS build, and Job Search Strategy. Needs a Claude data export → `context/scripts/import_claude.py`. ChatGPT import skipped.

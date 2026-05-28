@@ -7,44 +7,43 @@
 
 ## This Quarter
 
-**Quarter:** [FILL IN — e.g., Q3 2026 (July–September)]
+**Quarter:** Q2 2026 (April–June)
 
-**Theme:** [FILL IN — one word or short phrase that captures the focus. Examples: "Foundation", "Launch", "Scale", "Consolidate"]
+**Theme:** Prove it works
 
 ## Top 3 Priorities (in order)
 
-1. **[FILL IN]** — [1–2 sentence description of what "done" looks like]
-2. **[FILL IN]** — [description]
-3. **[FILL IN]** — [description]
+1. **Working inbox-triage skill** — Handles my real recruiter and job threads end to end: classifies what hits the inbox, drafts replies in my voice, and sends the safe ones. "Done" = it runs daily for a week and proves measurable time saved.
+2. **Compounding architecture score** — The CRAFT architecture/`/audit` score climbs week over week. The point isn't a metric for its own sake — it's the proof that the system gets smarter on a schedule. That's what demonstrates the engineering.
+3. **5-minute walkthrough** — The whole AIOS packaged as one artifact I can show on a pilot discovery call or a job interview. Same artifact, two audiences.
 
 ## Key Target
 
-[FILL IN — the single most important metric to move this quarter. Examples: "$15K MRR by September 30", "1,000 community members by end of quarter", "3 enterprise clients signed"]
+Inbox-triage skill running daily for a full week with measurable time saved — the headline proof point.
 
 ## What We're Deliberately Ignoring
 
-[FILL IN — what you're saying no to this quarter in order to focus. This is as important as what you're doing.]
+Building for hypothetical SMB clients before the personal proof works. No premature productization, no vanity features. Make my own inbox triage and compounding-score story undeniable first.
 
 ## Key Bets
 
-[FILL IN — the 1–2 highest-risk, highest-reward things you're trying this quarter]
+The "gets smarter on a schedule" narrative — a visibly compounding architecture score — is the differentiator that proves real engineering, not a demo.
 
 ## 90-Day Milestones
 
 | Date | Milestone |
 |------|-----------|
-| [Month Day] | [FILL IN] |
-| [Month Day] | [FILL IN] |
-| [Month Day] | [FILL IN] |
-| End of quarter | [The key target above] |
+| June 2026 | Inbox-triage skill live and used daily |
+| June 2026 | One full week of daily use logged with time-saved measurement |
+| End of quarter | 5-minute walkthrough ready; audit score trending up week over week |
 
 ## Last Quarter — What Worked / What Didn't
 
 **Worked:**
-- [FILL IN]
+- _(Add when you want.)_
 
 **Didn't work:**
-- [FILL IN]
+- _(Add when you want.)_
 
 **Carrying forward:**
-- [FILL IN — anything from last quarter that needs to continue]
+- Building this AIOS as the central portfolio + proof artifact
