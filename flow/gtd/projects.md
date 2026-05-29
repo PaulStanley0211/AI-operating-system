@@ -1,5 +1,5 @@
 # Projects
-<!-- v1.0.0 -->
+<!-- v1.1.0 -->
 
 > Master project list organized by area.
 > A project = any outcome requiring more than one action step.
@@ -7,43 +7,48 @@
 
 ---
 
-## [Area: Business]
+## Area: AIOS & Systems
 
-<!--
-### [Project Name]
-- **Outcome:** What "done" looks like in one sentence
-- **Status:** Active / On hold / Waiting on [person]
-- **Next action:** [First concrete next step — should also appear in next-actions.md @me]
--->
+### Inbox-triage proof
+- **Outcome:** `/triage` runs daily for a full week on real recruiter/human mail, with defensible time saved logged.
+- **Status:** Active — validate on real recruiter mail for a full week before scoping anything new.
+- **Next action:** Prove the live draft path end-to-end (@claude).
 
-### [FILL IN — Your first real project]
-- **Outcome:** [FILL IN]
-- **Status:** Active
-- **Next action:** [FILL IN]
+### Compounding audit score
+- **Outcome:** The v2 CRAFT audit score climbs week over week, honestly.
+- **Status:** Active — baseline 81/100 set 2026-05-29.
+- **Next action:** Re-run `/audit` on the Friday ritual and log the score (@claude).
 
----
-
-## [Area: Content]
-
-### [FILL IN — Your content project]
-- **Outcome:** [FILL IN]
-- **Status:** Active
-- **Next action:** [FILL IN]
+### 5-minute walkthrough
+- **Outcome:** The AIOS packaged as one polished artifact that works for BOTH pilot discovery calls and job interviews.
+- **Status:** Active — not started.
+- **Next action:** Outline the 5-minute script (@me).
 
 ---
 
-## [Area: Personal]
+## Area: Portfolio & Projects
 
-### [FILL IN — A personal project, if any]
-- **Outcome:** [FILL IN]
-- **Status:** Active
-- **Next action:** [FILL IN]
+### First LinkedIn case study (AIOS running)
+- **Outcome:** A published build-in-public post / case study showing the AIOS actually running, with real numbers.
+- **Status:** Active — gated on a week of real triage data.
+- **Next action:** Draft the post once triage has a week of real drafts (@me).
+
+### Populate portfolio context from GitHub
+- **Outcome:** Portfolio/projects context reflects my real GitHub repos, so the system and the walkthrough can speak to my actual work.
+- **Status:** Active.
+- **Next action:** Pull GitHub repos into portfolio context (@claude).
+
+---
+
+## Area: Job Search
+
+### Job-search pipeline
+- **Outcome:** A clear shortlist of roles to apply to (German + English-speaking), with applications tracked.
+- **Status:** Active — targeting both German and English-speaking roles (German B1, keep improving).
+- **Next action:** Shortlist 3–5 roles to apply to this week, B1-realistic (@me).
 
 ---
 
 ## Completed
 
-<!--
-Move finished projects here with a completion date. Keep for reference.
-### [Project Name] — Completed [date]
--->
+<!-- Move finished projects here with a completion date. -->

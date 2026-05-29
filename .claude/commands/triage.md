@@ -98,4 +98,10 @@ python -X utf8 -c "from actions.triage.runlog import record_run, weekly_rollup; 
 
 ## Step 7: Summary
 
-Print a short summary: drafts created (with where to find them — Gmail Drafts), gray-zone items surfaced (so Paul writes them), and the weekly rollup ("This week: N drafts, ~M minutes saved"). Keep it tight.
+Print a short summary: drafts created (with where to find them, Gmail Drafts) and gray-zone items surfaced (so Paul writes them).
+
+Then print the weekly rollup as a **transparent breakdown**, never a bare number. Use the keys from `weekly_rollup()`:
+
+> This week: {drafts} drafts (~{draft_minutes} min) + {scans} daily scans (~{triage_minutes} min) = ~{total_minutes} min saved. Noise filtered: {noise_filtered} emails.
+
+Every minute traces to a real action: `draft_minutes` is drafts × 6 (compose time), `triage_minutes` is scans × 3 (inbox scan skipped, credited only on runs that saw email). The `noise_filtered` count is the raw evidence behind the number. Keep it tight.

@@ -1,5 +1,5 @@
 # Someday / Maybe
-<!-- v1.0.0 -->
+<!-- v1.1.0 -->
 
 > Ideas and future commitments that aren't active yet.
 > Review weekly — activate anything worth doing now.
@@ -7,31 +7,26 @@
 
 ---
 
-## Business Ideas
+## Job-search tooling (parked until triage proves out)
 
-- [FILL IN — a business idea you don't want to lose]
-
----
-
-## Content / Creative
-
-- [FILL IN — content ideas, videos, posts]
+- Job-listings finder — surface the latest listings matched to my profile
+- Prospect identifier — find 5–10 recruiters / contacts worth a cold email, with a drafted approach
 
 ---
 
-## Learning
+## Pilot / business development (deferred per Q2 strategy)
 
-- [FILL IN — things to learn, courses, books]
-
----
-
-## Personal
-
-- [FILL IN — personal goals, travel, etc.]
+- Approach small-business operators in my orbit about AIOS pilots
 
 ---
 
 ## Tools / Systems to Explore
 
-- [FILL IN — tools or automations to investigate later]
+- Phone-notes → inbox.md sweep — only if I actually start capturing in phone notes
+- LinkedIn as a content/context source — one-time paste, not an auto-connector
 
+---
+
+## Learning
+
+- Keep improving German beyond B1 (ongoing) — German roles are in scope, so leveling up widens the pipeline

@@ -1,47 +1,39 @@
 # Areas of Responsibility
-<!-- v1.0.0 -->
+<!-- v1.1.0 -->
 
-> Areas are ongoing responsibilities — not projects with an end date.
-> Each area has a standard of performance you want to maintain.
+> Areas are ongoing responsibilities, not projects with an end date.
+> Each area has a standard of performance to maintain.
 > Use these during weekly review (Phase 3 — GET CREATIVE) to catch things not in any project.
+> Scope: work only. Personal/health is a separate domain and deliberately not tracked here.
 
 ---
 
-## Business
+## AIOS & Systems
 
-**What I'm responsible for:** [FILL IN — e.g., revenue growth, client delivery, team management]
+**Responsible for:** Building and tuning the AIOS; keeping reach/data fresh; the weekly audit + tuning loop.
 
-**Standard I want to maintain:** [FILL IN — e.g., "No client should wait more than 24h for a response"]
-
----
-
-## Content / YouTube
-
-**What I'm responsible for:** [FILL IN — e.g., publishing consistently, growing the audience]
-
-**Standard I want to maintain:** [FILL IN — e.g., "One video per week. Every video is better than the last."]
+**Standard:** Audit score trends up week over week, honestly. `/triage` runs on the days I intend. Nothing in the system is fake or a vanity metric.
 
 ---
 
-## Finance
+## Job Search
 
-**What I'm responsible for:** [FILL IN — e.g., cash flow, invoicing, tax prep]
+**Responsible for:** Finding and landing the right roles; answering real recruiters fast; deciding which roles fit given the German-language ceiling.
 
-**Standard I want to maintain:** [FILL IN — e.g., "Invoices sent within 48h of work completion"]
-
----
-
-## Personal
-
-**What I'm responsible for:** [FILL IN — e.g., health, relationships, rest]
-
-**Standard I want to maintain:** [FILL IN — e.g., "Exercise 4x per week. Sleep 7+ hours."]
+**Standard:** No real recruiter thread sits unanswered more than 48h.
 
 ---
 
-## Operations / Systems
+## Portfolio & Projects
 
-**What I'm responsible for:** [FILL IN — e.g., tools, automations, AIOS maintenance]
+**Responsible for:** paulstanley.dev, the GitHub work, ROSE, and the public proof (the walkthrough, LinkedIn).
 
-**Standard I want to maintain:** [FILL IN — e.g., "CRAFT audit score above 70 at all times"]
+**Standard:** Every featured project has a working demo or a clear walkthrough. The story is "ships," not "demos."
 
+---
+
+## Learning / Capability
+
+**Responsible for:** Leveling toward building AIOS for 5–50-person businesses; closing real skill gaps.
+
+**Standard:** Each cycle teaches a pattern I can reuse on a future client build.
