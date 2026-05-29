@@ -11,7 +11,7 @@ _ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DB_PATH = str(_ROOT / "reach" / "data" / "intel.db")
 
 
-def read_candidates(db_path=DEFAULT_DB_PATH, days_back=7):
+def read_candidates(db_path=DEFAULT_DB_PATH):
     conn = sqlite3.connect(db_path); conn.row_factory = sqlite3.Row
     rows = conn.execute(
         "SELECT message_id, thread_id, date, sender, subject, body_preview "

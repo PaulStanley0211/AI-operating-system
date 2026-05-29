@@ -76,6 +76,18 @@ conn.commit(); conn.close(); print('drafts created:', len(ITEMS))
 ```
 - Use the candidate's `message_id` as `in_reply_to` (it is the RFC Message-ID) and `to` = the candidate's sender.
 - Also record `triage_actions` rows for ignore and gray-zone items (action = 'ignored' / 'surfaced', draft_id = NULL) so they are not re-processed next run. Do this with a similar INSERT.
+```bash
+python -c "
+import json, sqlite3, datetime
+conn = sqlite3.connect('reach/data/intel.db')
+# NON_DRAFT: list of {message_id, classification, action} for ignore + gray-zone items
+NON_DRAFT = json.loads('''<JSON_HERE>''')
+for it in NON_DRAFT:
+    conn.execute('INSERT OR IGNORE INTO triage_actions (message_id, classification, action, draft_id, run_date) VALUES (?,?,?,?,?)',
+                 (it['message_id'], it['classification'], it['action'], None, datetime.date.today().isoformat()))
+conn.commit(); conn.close(); print('non-draft actions recorded:', len(NON_DRAFT))
+"
+```
 - If a single draft creation raises, report which one failed and continue the rest.
 
 Then record the run and print the rollup:
