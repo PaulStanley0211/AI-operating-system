@@ -12,7 +12,7 @@ version: 1.0.0
 
 Confirm `reach/auth/token.json` exists and its scopes include `gmail.compose`:
 ```bash
-python -c "import json,sys; d=json.load(open('reach/auth/token.json')); sys.exit(0 if any('gmail.compose' in s for s in d.get('scopes',[])) else 1)" && echo "compose OK" || echo "NEEDS REAUTH"
+python -X utf8 -c "import json,sys; d=json.load(open('reach/auth/token.json')); sys.exit(0 if any('gmail.compose' in s for s in d.get('scopes',[])) else 1)" && echo "compose OK" || echo "NEEDS REAUTH"
 ```
 If it prints `NEEDS REAUTH` or the file is missing, stop and tell the user:
 "Gmail needs re-auth with compose scope. Run: `rm reach/auth/token.json && python reach/auth/gmail_auth.py`"
@@ -21,7 +21,7 @@ If it prints `NEEDS REAUTH` or the file is missing, stop and tell the user:
 
 Run a Python snippet that refreshes the inbox and loads candidates:
 ```bash
-python -c "import json; from actions.triage.emails import get_candidates; cands, refreshed = get_candidates(refresh=True); print('REFRESHED', refreshed); print(json.dumps(cands, ensure_ascii=False))"
+python -X utf8 -c "import json; from actions.triage.emails import get_candidates; cands, refreshed = get_candidates(refresh=True); print('REFRESHED', refreshed); print(json.dumps(cands, ensure_ascii=False))"
 ```
 - `REFRESHED False` means the live pull failed — continue on existing data and note it in your summary.
 - Parse the JSON list of candidates (each: message_id, thread_id, date, sender, subject, body_preview).
@@ -59,7 +59,7 @@ Ask: "Approve all drafts, pick numbers, edit any, or skip?" Wait for his answer.
 
 For each APPROVED draft, create the Gmail draft and record the action:
 ```bash
-python -c "
+python -X utf8 -c "
 import json, datetime
 from actions.triage.gmail_draft import get_gmail_service, create_reply_draft
 import sqlite3
@@ -77,7 +77,7 @@ conn.commit(); conn.close(); print('drafts created:', len(ITEMS))
 - Use the candidate's `message_id` as `in_reply_to` (it is the RFC Message-ID) and `to` = the candidate's sender.
 - Also record `triage_actions` rows for ignore and gray-zone items (action = 'ignored' / 'surfaced', draft_id = NULL) so they are not re-processed next run. Do this with a similar INSERT.
 ```bash
-python -c "
+python -X utf8 -c "
 import json, sqlite3, datetime
 conn = sqlite3.connect('reach/data/intel.db')
 # NON_DRAFT: list of {message_id, classification, action} for ignore + gray-zone items
@@ -92,7 +92,7 @@ conn.commit(); conn.close(); print('non-draft actions recorded:', len(NON_DRAFT)
 
 Then record the run and print the rollup:
 ```bash
-python -c "from actions.triage.runlog import record_run, weekly_rollup; record_run(seen=SEEN, drafted=DRAFTED, surfaced=SURFACED, ignored=IGNORED); import json; print(json.dumps(weekly_rollup()))"
+python -X utf8 -c "from actions.triage.runlog import record_run, weekly_rollup; record_run(seen=SEEN, drafted=DRAFTED, surfaced=SURFACED, ignored=IGNORED); import json; print(json.dumps(weekly_rollup()))"
 ```
 (Substitute the integer counts from this run.)
 
