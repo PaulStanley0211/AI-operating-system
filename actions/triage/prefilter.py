@@ -6,6 +6,7 @@ NOISE_SENDER_FRAGMENTS = (
     "noreply@", "no-reply@", "donotreply@", "do-not-reply@",
     "notifications@", "notification@", "mailer@", "mailer-daemon@",
     "bounce@", "bounces@", "noreply12.", "jobnotification@",
+    "jobagent.", "invitations@linkedin.com", "linkedin@em.linkedin.com", "newsletter.",
 )
 
 NOISE_SUBJECT_FRAGMENTS = (
