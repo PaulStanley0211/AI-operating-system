@@ -104,15 +104,16 @@ def collect(days_back: int = 7):
         if is_noise(sender, subject):
             continue
 
+        thread_id = msg.get("threadId", "")
         body_preview = get_body_preview(msg["payload"])
         labels = ",".join(msg.get("labelIds", []))
 
         try:
             c.execute("""
                 INSERT OR IGNORE INTO emails
-                (source, message_id, date, sender, subject, body_preview, labels)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, ("gmail", message_id, date_str, sender, subject, body_preview, labels))
+                (source, message_id, thread_id, date, sender, subject, body_preview, labels)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """, ("gmail", message_id, thread_id, date_str, sender, subject, body_preview, labels))
             saved += 1
         except Exception:
             pass
