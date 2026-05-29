@@ -1,3 +1,4 @@
+import sys
 import sqlite3
 import importlib.util
 from pathlib import Path
@@ -8,8 +9,9 @@ def _load_db_module():
     spec = importlib.util.spec_from_file_location("aios_db", DB_MODULE)
     mod = importlib.util.module_from_spec(spec)
     # db.py imports `from config import ...`; add its dir to path first.
-    import sys
-    sys.path.insert(0, str(DB_MODULE.parent))
+    path_to_add = str(DB_MODULE.parent)
+    if path_to_add not in sys.path:
+        sys.path.insert(0, path_to_add)
     spec.loader.exec_module(mod)
     return mod
 
