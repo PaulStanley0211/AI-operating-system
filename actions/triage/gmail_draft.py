@@ -32,6 +32,17 @@ def create_reply_draft(service, thread_id, to, subject, body,
     return draft["id"]
 
 
+def create_simple_draft(service, to, subject, body):
+    """Create a standalone (non-threaded) draft, e.g. a triage summary to self."""
+    msg = EmailMessage()
+    msg["To"] = to
+    msg["Subject"] = subject
+    msg.set_content(body)
+    draft = service.users().drafts().create(
+        userId="me", body={"message": {"raw": _encode(msg)}}).execute()
+    return draft["id"]
+
+
 def get_gmail_service(token_path=DEFAULT_TOKEN_PATH):
     """Build a Gmail API service from the saved token (lazy imports so tests
     that only exercise the pure builders don't need google libs)."""
