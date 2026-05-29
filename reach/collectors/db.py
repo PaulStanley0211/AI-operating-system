@@ -78,12 +78,34 @@ def init_intel_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             source TEXT NOT NULL,
             message_id TEXT UNIQUE,
+            thread_id TEXT,
             date TEXT,
             sender TEXT,
             subject TEXT,
             body_preview TEXT,
             labels TEXT,
             collected_at TEXT DEFAULT CURRENT_TIMESTAMP
+        );
+
+        CREATE TABLE IF NOT EXISTS triage_actions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            message_id TEXT UNIQUE,
+            classification TEXT,
+            action TEXT,
+            draft_id TEXT,
+            run_date TEXT,
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
+        );
+
+        CREATE TABLE IF NOT EXISTS triage_runs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            run_date TEXT NOT NULL,
+            seen INTEGER,
+            drafted INTEGER,
+            surfaced INTEGER,
+            ignored INTEGER,
+            est_minutes_saved INTEGER,
+            created_at TEXT DEFAULT CURRENT_TIMESTAMP
         );
 
         CREATE TABLE IF NOT EXISTS meetings (
